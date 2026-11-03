@@ -1,0 +1,148 @@
+CAPRI FREE LICENSE / LICENCE LIBRE CAPRI
+Version 1.0
+
+Copyright (c) 2026 Cellri131
+
+English version first, French version below / Version anglaise d'abord, version française plus bas.
+If the two versions differ, the English one prevails / En cas de différence, la version anglaise prévaut.
+
+===========================================================================
+ENGLISH
+===========================================================================
+
+In short: Capri is free and stays free. You can use her, change her and share what you made, as long as nobody
+pays for it. The full terms below are the ones that count.
+
+1. WHAT THIS LICENSE COVERS
+
+   This license covers the source code and the documentation written for this project (the "Software"). It does
+   not cover the elements listed in section 6.
+
+2. WHAT YOU MAY DO
+
+   Provided you follow the conditions below, you may, free of charge:
+   a) use the Software for any non-commercial purpose (personal, hobby, study, research, education, non-profit);
+   b) copy it and share it with others;
+   c) modify it and share your modified versions.
+
+3. WHAT YOU MAY NOT DO
+
+   You may not sell the Software, nor anything made from its source code, and you may not use it to make money.
+   This includes, for example: selling or renting copies, license keys, subscriptions, paid access or paid
+   features, paid orders or commissions, paid hosting or services built on it, bundling it in a paid product, and
+   any use that brings you advertising or sponsorship revenue because of the Software.
+
+   Donations that give nothing in return are allowed, as long as they do not unlock anything.
+
+4. CONDITIONS
+
+   a) Keep this license file and the copyright line "Copyright (c) 2026 Cellri131" in every copy you share.
+   b) Clearly state that you changed the Software if you share a modified version, and do not present it as the
+      original or as an official version.
+   c) Share your modified versions under these same terms, free of charge.
+   d) Do not remove or hide the fan project notice (section 7).
+
+5. YOUR OWN CONTRIBUTIONS
+
+   What you write yourself and add to the Software belongs to you, but when you share it together with the
+   Software it follows these same terms.
+
+6. WHAT THIS LICENSE DOES NOT COVER
+
+   a) The character artwork: the images in "assets/" and "docs/images/", and the icon files ("Icon*.png",
+      "*.ico"). They show the character Capri from "Cyberpunk: Edgerunners" and belong to their respective rights
+      holders (CD PROJEKT RED, Studio Trigger and others). No right over them is granted here.
+   b) The voice file "capri_french.safetensors" and the models downloaded by third-party tools (Pocket-TTS, Piper
+      voices). They keep their own licenses.
+   c) Third-party libraries and tools (see "requirements.txt"). They keep their own licenses.
+
+7. FAN PROJECT
+
+   This is an unofficial fan project. It is not affiliated with, nor endorsed by, CD PROJEKT RED, Studio Trigger
+   or Netflix.
+
+8. END OF THE LICENSE
+
+   If you break these terms, your rights end. If you are told in writing and fix the problem within 30 days, they
+   are restored. Otherwise they end for good. The author may also give you separate permission in writing, for
+   example for commercial use.
+
+9. NO WARRANTY
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+   TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+   OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.
+
+===========================================================================
+FRANÇAIS
+===========================================================================
+
+En bref : Capri est gratuite et le reste. Tu peux l'utiliser, la modifier et partager ce que tu as fait, tant que
+personne ne paie pour cela. Seules les conditions complètes ci-dessous font foi.
+
+1. CE QUE COUVRE CETTE LICENCE
+
+   Cette licence couvre le code source et la documentation écrits pour ce projet (le « Logiciel »). Elle ne couvre
+   pas les éléments listés à l'article 6.
+
+2. CE QUE TU PEUX FAIRE
+
+   À condition de respecter les conditions ci-dessous, tu peux, gratuitement :
+   a) utiliser le Logiciel à toute fin non commerciale (personnelle, loisir, étude, recherche, enseignement,
+      association à but non lucratif) ;
+   b) le copier et le partager avec d'autres personnes ;
+   c) le modifier et partager tes versions modifiées.
+
+3. CE QUE TU NE PEUX PAS FAIRE
+
+   Tu ne peux pas vendre le Logiciel, ni rien de ce qui est créé à partir de son code source, ni l'utiliser pour
+   gagner de l'argent. Cela comprend notamment : la vente ou la location de copies, les clés de licence, les
+   abonnements, l'accès ou les fonctions payantes, les commandes ou prestations payantes, l'hébergement ou les
+   services payants construits dessus, son intégration dans un produit payant, et tout usage qui te rapporte des
+   revenus de publicité ou de parrainage grâce au Logiciel.
+
+   Les dons qui ne donnent rien en échange sont autorisés, tant qu'ils ne débloquent rien.
+
+4. CONDITIONS
+
+   a) Garde ce fichier de licence et la mention « Copyright (c) 2026 Cellri131 » dans chaque copie partagée.
+   b) Indique clairement que tu as modifié le Logiciel si tu partages une version modifiée, et ne la présente pas
+      comme l'originale ni comme une version officielle.
+   c) Partage tes versions modifiées sous ces mêmes conditions, gratuitement.
+   d) Ne retire pas et ne cache pas la mention de projet de fan (article 7).
+
+5. TES PROPRES CONTRIBUTIONS
+
+   Ce que tu écris toi-même et ajoutes au Logiciel t'appartient, mais lorsque tu le partages avec le Logiciel, il
+   suit ces mêmes conditions.
+
+6. CE QUE CETTE LICENCE NE COUVRE PAS
+
+   a) Les illustrations du personnage : les images de « assets/ » et de « docs/images/ », ainsi que les fichiers
+      d'icônes (« Icon*.png », « *.ico »). Elles représentent le personnage Capri de « Cyberpunk: Edgerunners » et
+      appartiennent à leurs ayants droit respectifs (CD PROJEKT RED, Studio Trigger et autres). Aucun droit sur
+      elles n'est accordé ici.
+   b) Le fichier de voix « capri_french.safetensors » et les modèles téléchargés par des outils tiers (Pocket-TTS,
+      voix Piper). Ils gardent leurs propres licences.
+   c) Les bibliothèques et outils tiers (voir « requirements.txt »). Ils gardent leurs propres licences.
+
+7. PROJET DE FAN
+
+   Ce projet est un projet de fan non officiel. Il n'est ni affilié à CD PROJEKT RED, Studio Trigger ou Netflix,
+   ni approuvé par eux.
+
+8. FIN DE LA LICENCE
+
+   Si tu ne respectes pas ces conditions, tes droits prennent fin. Si on te le signale par écrit et que tu corriges
+   le problème sous 30 jours, ils te sont rendus. Sinon, ils prennent fin définitivement. L'auteur peut aussi
+   t'accorder une autorisation distincte par écrit, par exemple pour un usage commercial.
+
+9. ABSENCE DE GARANTIE
+
+   LE LOGICIEL EST FOURNI « TEL QUEL », SANS GARANTIE D'AUCUNE SORTE, EXPLICITE OU IMPLICITE, Y COMPRIS, SANS
+   S'Y LIMITER, LES GARANTIES DE QUALITÉ MARCHANDE, D'ADAPTATION À UN USAGE PARTICULIER ET D'ABSENCE DE
+   CONTREFAÇON. L'AUTEUR NE POURRA EN AUCUN CAS ÊTRE TENU RESPONSABLE DE TOUTE RÉCLAMATION, DE TOUT DOMMAGE OU DE
+   TOUTE AUTRE RESPONSABILITÉ, QUE CE SOIT DANS LE CADRE D'UN CONTRAT, D'UN DÉLIT OU AUTRE, DÉCOULANT DU LOGICIEL,
+   DE SON UTILISATION OU D'AUTRES OPÉRATIONS LIÉES AU LOGICIEL.

@@ -47,6 +47,7 @@
 - [6. Troubleshooting](#6-troubleshooting)
 - [7. Customisation](#7-customisation)
 - [8. Project Files](#8-project-files)
+- [9. License and Copyright](#9-license-and-copyright)
 
 ---
 
@@ -613,6 +614,29 @@ Test options: `python assistant_vocal.py --muet` (no sound), `--sans-micro` (no 
 | `creer_raccourci_bureau.bat` | Creates the desktop shortcut |
 | `installer_au_demarrage.bat` / `desinstaller_demarrage.bat` | Start automatically with Windows |
 | `installer_dependances.bat` / `installer_voix.py` | Dependencies and fallback voice |
+| `LICENSE` | Capri Free License (EN/FR) |
+
+---
+
+## 9. License and Copyright
+
+Copyright © 2026 Cellri131. The source code and documentation of this project are released under the
+**[Capri Free License](LICENSE)** (available in English and French in the same file).
+
+In short: Capri is free and stays free. You can use her, change her and share what you made, as long as nobody pays
+for it. Selling this software, or anything made from its source code (keys, subscriptions, paid access, paid orders),
+is not allowed. The full terms in [LICENSE](LICENSE) are the ones that count.
+
+| Element | Status |
+|:--------|:-------|
+| Source code and documentation | Capri Free License (non-commercial, share-alike) |
+| Capri images and icons (`assets/`, `docs/images/`, `Icon*.png`, `*.ico`) | Not covered: the character Capri belongs to its rights holders (CD PROJEKT RED, Studio Trigger) |
+| `capri_french.safetensors` and downloaded voice models (Pocket-TTS, Piper) | Their own licenses apply |
+| Third-party libraries (see `requirements.txt`) | Their own licenses apply |
+
+> [!NOTE]
+> This is an unofficial fan project, not affiliated with or endorsed by CD PROJEKT RED, Studio Trigger or Netflix.
+> Cyberpunk: Edgerunners and its characters are the property of their respective owners.
 
 <p align="right"><sub><a href="#version-française">Version française ↓</a> · <a href="#capri--user-guide--guide-dutilisation">↑ Top</a></sub></p>
 
@@ -652,6 +676,7 @@ Test options: `python assistant_vocal.py --muet` (no sound), `--sans-micro` (no 
 - [6. Dépannage](#6-dépannage)
 - [7. Personnalisation](#7-personnalisation)
 - [8. Fichiers du projet](#8-fichiers-du-projet)
+- [9. Licence et copyright](#9-licence-et-copyright)
 
 ---
 
@@ -1223,6 +1248,30 @@ Next updates will include:
 - Already include LLM as an option for responses
 - New avatar, expressions and gestures
 - Support for more languages
+
+
+---
+
+## 9. Licence et copyright
+
+Copyright © 2026 Cellri131. Le code source et la documentation de ce projet sont publiés sous
+**[Licence libre Capri](LICENSE)** (disponible en anglais et en français dans le même fichier).
+
+En bref : Capri est gratuite et le reste. Tu peux l'utiliser, la modifier et partager ce que tu as fait, tant que
+personne ne paie pour cela. Vendre ce logiciel, ou quoi que ce soit créé à partir de son code source (clés,
+abonnements, accès payant, commandes payantes), est interdit. Les conditions complètes figurent dans
+[LICENSE](LICENSE), en anglais et en français.
+
+| Élément | Statut |
+|:--------|:-------|
+| Code source et documentation | Licence libre Capri (non commerciale, partage à l'identique) |
+| Images et icônes de Capri (`assets/`, `docs/images/`, `Icon*.png`, `*.ico`) | Non couvertes : le personnage Capri appartient à ses ayants droit (CD PROJEKT RED, Studio Trigger) |
+| `capri_french.safetensors` et modèles de voix téléchargés (Pocket-TTS, Piper) | Leurs propres licences s'appliquent |
+| Bibliothèques tierces (voir `requirements.txt`) | Leurs propres licences s'appliquent |
+
+> [!NOTE]
+> Projet de fan non officiel, sans affiliation ni approbation de CD PROJEKT RED, Studio Trigger ou Netflix.
+> Cyberpunk: Edgerunners et ses personnages appartiennent à leurs propriétaires respectifs.
 
 # Prochaines Mise à Jour
 
