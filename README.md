@@ -8,6 +8,8 @@
 |:---------|:--------|
 | 🇬🇧 English | **[Read the English guide](#english-version)** |
 | 🇫🇷 Français | **[Lire la version française](#version-française)** |
+| 🇬🇧 English | **[Future Updates](#Future-Updates)** |
+| 🇫🇷 Français | **[Prochaines Mise à Jour](#Prochaines-Mise-à-Jour)** |
 
 ---
 
@@ -57,6 +59,8 @@ her, talk to her, tune her behaviour and fix common problems.
 
 > [!NOTE]
 > Capri listens and speaks **French**. Voice commands are given in French, with a translation where useful.
+> Capri can be turn in **English** by changing the project already have a voice file for the English voice (and your windows as well) and commands accordingly, `phrases.txt` is like `lines.txt` you will see furtgher but you can change them to English.
+
 
 ---
 
@@ -179,6 +183,10 @@ Plain text, editable with Notepad and **reloaded automatically** (no need to res
 [bavardage]
 [taquine] Tu sais, de là où je suis, ton écran ressemble à une ville pleine de lumières.
 ```
+
+<p align="center">
+  <img src="docs/images/capri_talk.png" alt="Capri parle" width="300">
+</p>
 
 ### 3.5 The Avatar and the Tray Menu
 
@@ -623,7 +631,7 @@ Test options: `python assistant_vocal.py --muet` (no sound), `--sans-micro` (no 
   - [3.4 Apparitions, éclairs et phrases spontanées](#34-apparitions-éclairs-et-phrases-spontanées)
   - [3.5 L'avatar et le menu de l'icône](#35-lavatar-et-le-menu-de-licône)
   - [3.6 Choisir la voix](#36-choisir-la-voix)
-  - [3.7 Conversation libre (optionnel)](#37-conversation-libre-optionnel)
+  - [3.7 Conversation libre A base de LLM (optionnel)](#37-conversation-libre-optionnel)
 - [4. Architecture et conception](#4-architecture-et-conception)
   - [4.1 Vue d'ensemble](#41-vue-densemble)
   - [4.2 De « Capri » à la réponse](#42-de--capri--à-la-réponse)
@@ -774,6 +782,10 @@ Texte brut, modifiable avec le Bloc-notes, **relu automatiquement** (pas besoin 
 [bavardage]
 [taquine] Tu sais, de là où je suis, ton écran ressemble à une ville pleine de lumières.
 ```
+
+<p align="center">
+  <img src="docs/images/capri_talk.png" alt="Capri parle" width="300">
+</p>
 
 ### 3.5 L'avatar et le menu de l'icône
 
@@ -1201,4 +1213,26 @@ Options de test : `python assistant_vocal.py --muet` (sans son), `--sans-micro` 
 | `installer_au_demarrage.bat` / `desinstaller_demarrage.bat` | Lancement automatique avec Windows |
 | `installer_dependances.bat` / `installer_voix.py` | Dépendances et voix de secours |
 
-<p align="center"><sub>Capri 2.0 – anciennement Carl · <a href="#capri--user-guide--guide-dutilisation">↑ Haut de page</a> · <a href="#english-version">English version</a></sub></p>
+---
+
+# Future Updates
+
+Next updates will include:
+- Improved voice synthesis and lip-sync accuracy
+- Additional commands for PC control
+- Already include LLM as an option for responses
+- New avatar, expressions and gestures
+- Support for more languages
+
+# Prochaines Mise à Jour
+
+Les prochaines mises à jour incluront :
+- Amélioration de la synthèse vocale et de la synchronisation labiale
+- Commandes supplémentaires pour le contrôle du PC
+- Déjà inclure LLM comme option pour les réponses
+- Nouvel avatar, expressions et gestes
+- Support pour plus de langues
+
+<p align="center"><sub>Capri 2.0 – before Carl – for any question, bug report or feedback text me on discord : cellri131· <a href="#capri--user-guide--guide-dutilisation">↑ Haut de page</a> · <a href="#english-version">English version</a></sub></p>
+
+
