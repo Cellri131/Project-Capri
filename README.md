@@ -16,37 +16,35 @@
 ## Table of contents
 
 - [1. Overview](#1-overview)
-- [2. What You Will Learn](#2-what-you-will-learn)
-- [3. Before You Start](#3-before-you-start)
-- [4. Steps](#4-steps)
-  - [Step 1 - Launch Capri](#step-1---launch-capri)
-  - [Step 2 - Talk to Her](#step-2---talk-to-her)
-  - [Step 3 - Give Orders](#step-3---give-orders)
-  - [Step 4 - Appearances, Lightning and Spontaneous Phrases](#step-4---appearances-lightning-and-spontaneous-phrases)
-  - [Step 5 - The Avatar and the Tray Menu](#step-5---the-avatar-and-the-tray-menu)
-  - [Step 6 - Choose the Voice](#step-6---choose-the-voice)
-  - [Step 7 - Free Conversation (optional)](#step-7---free-conversation-optional)
-- [5. Architecture and Design](#5-architecture-and-design)
-  - [5.1 Overview](#51-overview)
-  - [5.2 From "Capri" to the Answer](#52-from-capri-to-the-answer)
-  - [5.3 Name Recognition](#53-name-recognition)
-  - [5.4 Voice Selection](#54-voice-selection)
-  - [5.5 The Brain: Three Levels of Answer](#55-the-brain-three-levels-of-answer)
-  - [5.6 Emotions and Expressions](#56-emotions-and-expressions)
-  - [5.7 Spontaneous Initiatives](#57-spontaneous-initiatives)
-- [6. Technical Reference](#6-technical-reference)
-  - [6.1 Modules](#61-modules)
-  - [6.2 Settings and Migrations](#62-settings-and-migrations)
-  - [6.3 Bounded Microphone Threshold](#63-bounded-microphone-threshold)
-  - [6.4 Emotions: Mapping Table](#64-emotions-mapping-table)
-  - [6.5 Adding a Built-in Line](#65-adding-a-built-in-line)
-  - [6.6 Adding a Voice Engine](#66-adding-a-voice-engine)
-  - [6.7 Talk Levels](#67-talk-levels)
-  - [6.8 Dependencies](#68-dependencies)
-- [7. Debugging and Pitfalls](#7-debugging-and-pitfalls)
-- [8. Production Checklist](#8-production-checklist)
-- [9. Extension](#9-extension)
-- [10. Project Files](#10-project-files)
+- [2. Requirements](#2-requirements)
+- [3. Usage](#3-usage)
+  - [3.1 Launch Capri](#31-launch-capri)
+  - [3.2 Talk to Her](#32-talk-to-her)
+  - [3.3 Give Orders](#33-give-orders)
+  - [3.4 Appearances, Lightning and Spontaneous Phrases](#34-appearances-lightning-and-spontaneous-phrases)
+  - [3.5 The Avatar and the Tray Menu](#35-the-avatar-and-the-tray-menu)
+  - [3.6 Choose the Voice](#36-choose-the-voice)
+  - [3.7 Free Conversation (optional)](#37-free-conversation-optional)
+- [4. Architecture and Design](#4-architecture-and-design)
+  - [4.1 Overview](#41-overview)
+  - [4.2 From "Capri" to the Answer](#42-from-capri-to-the-answer)
+  - [4.3 Name Recognition](#43-name-recognition)
+  - [4.4 Voice Selection](#44-voice-selection)
+  - [4.5 The Brain: Three Levels of Answer](#45-the-brain-three-levels-of-answer)
+  - [4.6 Emotions and Expressions](#46-emotions-and-expressions)
+  - [4.7 Spontaneous Initiatives](#47-spontaneous-initiatives)
+- [5. Technical Reference](#5-technical-reference)
+  - [5.1 Modules](#51-modules)
+  - [5.2 Settings and Migrations](#52-settings-and-migrations)
+  - [5.3 Bounded Microphone Threshold](#53-bounded-microphone-threshold)
+  - [5.4 Emotions: Mapping Table](#54-emotions-mapping-table)
+  - [5.5 Adding a Built-in Line](#55-adding-a-built-in-line)
+  - [5.6 Adding a Voice Engine](#56-adding-a-voice-engine)
+  - [5.7 Talk Levels](#57-talk-levels)
+  - [5.8 Dependencies](#58-dependencies)
+- [6. Troubleshooting](#6-troubleshooting)
+- [7. Customisation](#7-customisation)
+- [8. Project Files](#8-project-files)
 
 ---
 
@@ -62,20 +60,7 @@ her, talk to her, tune her behaviour and fix common problems.
 
 ---
 
-## 2. What You Will Learn
-
-| Skill | You can... |
-|:------|:-----------|
-| Launch Capri | Start from the desktop shortcut and find her tray icon |
-| Talk to her | Call her by name, with or without a request, even when she is hidden |
-| Give orders | Open apps, search the web, change the volume, lock the PC |
-| Tune her behaviour | Choose her positions, lightning speed and how much she talks |
-| Customise | Edit her phrases, change her voice and connect a language model |
-| Troubleshoot | Diagnose flaky listening or a failed start |
-
----
-
-## 3. Before You Start
+## 2. Requirements
 
 | Item | Check |
 |:-----|:------|
@@ -88,11 +73,11 @@ her, talk to her, tune her behaviour and fix common problems.
 
 ---
 
-## 4. Steps
+## 3. Usage
 
-### Step 1 - Launch Capri
+### 3.1 Launch Capri
 
-Start Capri from the desktop. (1 min)
+Start Capri from the desktop.
 
 1. **Double-click the `Capri` shortcut on the desktop** (created by `creer_raccourci_bureau.bat`).
 2. Capri appears in a pink and green lightning flash.
@@ -108,15 +93,13 @@ Start Capri from the desktop. (1 min)
 > To change the icons, replace these files and run `creer_raccourci_bureau.bat` again. Launching the shortcut while
 > she is already running does not create a duplicate: she simply shows herself.
 
-**Checkpoint:** Capri is visible on screen and her icon is in the notification area.
-
-### Step 2 - Talk to Her
+### 3.2 Talk to Her
 
 <p align="center">
   <img src="docs/images/capri_screen.png" alt="Capri listening" width="300">
 </p>
 
-Capri **listens all the time**, even when hidden, but only obeys if you say her name. (5 min)
+Capri **listens all the time**, even when hidden, but only obeys if you say her name.
 
 1. Say **"Capri"** followed by your request: *"Capri, quelle heure est-il ?"* (what time is it?)
 2. Or say **"Capri"** alone, wait about 1 second (she appears if she was hidden, her eyes turn green), then make
@@ -143,9 +126,7 @@ Without her name everything is ignored (the only exception: the number to pick w
 > She is **deaf while speaking**. Very short delays between her initiatives make her talk non-stop and therefore miss
 > you.
 
-**Checkpoint:** "Capri, quelle heure est-il ?" gets a spoken answer with the time.
-
-### Step 3 - Give Orders
+### 3.3 Give Orders
 
 <p align="center">
   <img src="docs/images/capri_search.png" alt="Capri searching for information" width="300">
@@ -160,14 +141,12 @@ Without her name everything is ignored (the only exception: the number to pick w
 | **System** | "Capri, fais une capture d'écran" (screenshot), "verrouille la session" (lock), "éteins le PC" (shutdown in 10 s, say "annule" to cancel) |
 | **Capri** | "Capri, quitte" / "ferme-toi" (she closes), "au revoir" (she says goodbye but stays) |
 
-**Checkpoint:** "Capri, recherche youtube" opens a search in the browser.
-
-### Step 4 - Appearances, Lightning and Spontaneous Phrases
+### 3.4 Appearances, Lightning and Spontaneous Phrases
 
 Capri doesn't have to stay on screen: from time to time, **without being asked**, she disappears, reappears at a
 **random position on the screen**, teleports or says a phrase. While hidden she may let her **lightning cross the
 screen** without showing herself. If you hide her yourself (right-click the icon), she stays hidden until you say
-"Capri". (10 min)
+"Capri".
 
 Open `capri_config.json` (created on first launch) and adjust:
 
@@ -201,9 +180,7 @@ Plain text, editable with Notepad and **reloaded automatically** (no need to res
 [taquine] Tu sais, de là où je suis, ton écran ressemble à une ville pleine de lumières.
 ```
 
-**Checkpoint:** with `niveau_parole` set to `bavarde`, she appears, disappears and talks without you saying anything.
-
-### Step 5 - The Avatar and the Tray Menu
+### 3.5 The Avatar and the Tray Menu
 
 | Action on the avatar | Effect |
 |:---------------------|:-------|
@@ -235,9 +212,7 @@ Tray menu (left click: show / hide; right click: menu):
 | Economy mode | Fewer resources (automatic on battery) |
 | Show status / Quit | |
 
-**Checkpoint:** pick another entry in "Voice choice": she says a phrase to try it.
-
-### Step 6 - Choose the Voice
+### 3.6 Choose the Voice
 
 <p align="center">
   <img src="docs/images/capri_self.png" alt="Capri speaking" width="300">
@@ -249,7 +224,7 @@ Tray menu (left click: show / hide; right click: menu):
 - `capri_config.json` → `voix`: `moteur` (`auto`, `capri`, `local` for Piper, `edge`, `windows`), `fichier_voix`,
   `volume`, `muet` (mute). `vitesse` and `hauteur` only apply to the fallback voices.
 
-### Step 7 - Free Conversation (optional)
+### 3.7 Free Conversation (optional)
 
 Without configuration, Capri answers with her built-in lines and offers a **web search** for open questions. To let
 her chat freely with the same personality, connect a language model (OpenAI-compatible API) in `capri_config.json`,
@@ -271,9 +246,9 @@ section `llm`:
 
 ---
 
-## 5. Architecture and Design
+## 4. Architecture and Design
 
-### 5.1 Overview
+### 4.1 Overview
 
 Capri is a small **multi-threaded** Python program: one thread captures the microphone, another recognises and
 interprets speech, a third gives her initiative, while the avatar draws its translucent window and the tray icon
@@ -306,7 +281,7 @@ flowchart LR
 | Avatar window | Draws at ~30 frames/s in a translucent Windows window |
 | Tray icon | Menu, option toggles |
 
-### 5.2 From "Capri" to the Answer
+### 4.2 From "Capri" to the Answer
 
 ```mermaid
 sequenceDiagram
@@ -333,7 +308,7 @@ sequenceDiagram
     V-->>A: mouth level every 20 ms
 ```
 
-### 5.3 Name Recognition
+### 4.3 Name Recognition
 
 ```mermaid
 flowchart TD
@@ -348,7 +323,7 @@ flowchart TD
     W -- no --> X["Ignored"]
 ```
 
-### 5.4 Voice Selection
+### 4.4 Voice Selection
 
 ```mermaid
 flowchart LR
@@ -400,7 +375,7 @@ classDiagram
 | `edge` | ❌ | Very good | `volume`, `vitesse`, `hauteur` |
 | `windows` (Hortense) | ✅ | Basic | `volume` |
 
-### 5.5 The Brain: Three Levels of Answer
+### 4.5 The Brain: Three Levels of Answer
 
 ```mermaid
 flowchart TD
@@ -423,7 +398,7 @@ flowchart TD
 
 The history keeps the last 12 messages; the LLM receives the date and time on every call.
 
-### 5.6 Emotions and Expressions
+### 4.6 Emotions and Expressions
 
 Each answer carries an **emotion** (from the LLM through a tag in square brackets, or from the built-in line), which
 picks the sprite. The mouth follows the voice at three levels (closed, half-open, open).
@@ -458,7 +433,7 @@ stateDiagram-v2
     repos --> repos: random expression every 3 to 14 s
 ```
 
-### 5.7 Spontaneous Initiatives
+### 4.7 Spontaneous Initiatives
 
 ```mermaid
 flowchart TD
@@ -480,9 +455,9 @@ flowchart TD
 
 ---
 
-## 6. Technical Reference
+## 5. Technical Reference
 
-### 6.1 Modules
+### 5.1 Modules
 
 | Module | Key classes / functions | Role |
 |:-------|:------------------------|:-----|
@@ -495,7 +470,7 @@ flowchart TD
 | `capri_config.py` | `charger`, `sauvegarder`, `DEFAUTS`, `MIGRATIONS` | Versioned settings |
 | `capri_sprites.py` | | Loads and caches the images from `assets/` |
 
-### 6.2 Settings and Migrations
+### 5.2 Settings and Migrations
 
 `DEFAUTS` is merged with `capri_config.json`, so changing a default does not change an already saved value. To force a
 new value once, bump `VERSION_CONFIG` and declare the key:
@@ -508,7 +483,7 @@ MIGRATIONS = {
 }
 ```
 
-### 6.3 Bounded Microphone Threshold
+### 5.3 Bounded Microphone Threshold
 
 The recognition library lets the energy threshold drift towards 1 in a silent room (the slightest breath then
 triggers a recording). `Reconnaisseur` keeps it between `seuil_min` and `seuil_max`:
@@ -524,7 +499,7 @@ class Reconnaisseur(sr.Recognizer):
         self._seuil = max(self.plancher, min(self.plafond, valeur))
 ```
 
-### 6.4 Emotions: Mapping Table
+### 5.4 Emotions: Mapping Table
 
 ```python
 ETIQUETTES = {
@@ -537,7 +512,7 @@ ETIQUETTES = {
 The LLM must start its answer with one of these tags (it is not read aloud). `ClientLLM.repondre` strips it from the
 text and converts it to a sprite.
 
-### 6.5 Adding a Built-in Line
+### 5.5 Adding a Built-in Line
 
 Each `INTENTIONS` entry pairs a name, a regular expression (applied to accent-free text) and lines
 `(text, emotion)`. A line different from the previous one is drawn each time:
@@ -548,7 +523,7 @@ Each `INTENTIONS` entry pairs a name, a regular expression (applied to accent-fr
 ]),
 ```
 
-### 6.6 Adding a Voice Engine
+### 5.6 Adding a Voice Engine
 
 1. Write a class with `disponible()` and `synthese(texte, tempo, hauteur)` returning `(16-bit pcm, sample rate)`,
    like `MoteurCapri`.
@@ -562,7 +537,7 @@ def synthese(self, texte, tempo, hauteur):
     return pcm, int(self.modele.sample_rate)
 ```
 
-### 6.7 Talk Levels
+### 5.7 Talk Levels
 
 ```python
 NIVEAUX_PAROLE = {
@@ -573,7 +548,7 @@ NIVEAUX_PAROLE = {
 }
 ```
 
-### 6.8 Dependencies
+### 5.8 Dependencies
 
 | Package | Use |
 |:--------|:----|
@@ -588,7 +563,7 @@ NIVEAUX_PAROLE = {
 
 ---
 
-## 7. Debugging and Pitfalls
+## 6. Troubleshooting
 
 | Symptom | Likely cause | How to confirm | Fix |
 |:--------|:-------------|:---------------|:----|
@@ -605,20 +580,7 @@ Test options: `python assistant_vocal.py --muet` (no sound), `--sans-micro` (no 
 
 ---
 
-## 8. Production Checklist
-
-| Requirement | Done |
-|:------------|:-----|
-| The desktop shortcut launches Capri and the tray icon appears | |
-| "Capri, quelle heure est-il ?" gets an answer | |
-| While hidden, "Capri" alone makes her appear and listen | |
-| She appears at random positions on the screen | |
-| The voice picked in the menu is the one used | |
-| `niveau_parole` visibly changes how often she talks | |
-
----
-
-## 9. Extension
+## 7. Customisation
 
 - **Her phrases**: add your own lines to `phrases.txt`, with a mood per line.
 - **Her look**: replace the images in `assets/` (see `capri_sprites.py`); file names must follow the same pattern.
@@ -626,7 +588,7 @@ Test options: `python assistant_vocal.py --muet` (no sound), `--sans-micro` (no 
 
 ---
 
-## 10. Project Files
+## 8. Project Files
 
 | File | Purpose |
 |:-----|:--------|
@@ -653,37 +615,35 @@ Test options: `python assistant_vocal.py --muet` (no sound), `--sans-micro` (no 
 ## Sommaire
 
 - [1. Vue d'ensemble](#1-vue-densemble)
-- [2. Ce que tu vas apprendre](#2-ce-que-tu-vas-apprendre)
-- [3. Avant de commencer](#3-avant-de-commencer)
-- [4. Étapes](#4-étapes)
-  - [Étape 1 – Lancer Capri](#étape-1--lancer-capri)
-  - [Étape 2 – Lui parler](#étape-2--lui-parler)
-  - [Étape 3 – Donner des ordres](#étape-3--donner-des-ordres)
-  - [Étape 4 – Apparitions, éclairs et phrases spontanées](#étape-4--apparitions-éclairs-et-phrases-spontanées)
-  - [Étape 5 – L'avatar et le menu de l'icône](#étape-5--lavatar-et-le-menu-de-licône)
-  - [Étape 6 – Choisir la voix](#étape-6--choisir-la-voix)
-  - [Étape 7 – Conversation libre (optionnel)](#étape-7--conversation-libre-optionnel)
-- [5. Architecture et conception](#5-architecture-et-conception)
-  - [5.1 Vue d'ensemble](#51-vue-densemble)
-  - [5.2 De « Capri » à la réponse](#52-de--capri--à-la-réponse)
-  - [5.3 Reconnaissance du nom](#53-reconnaissance-du-nom)
-  - [5.4 Choix de la voix](#54-choix-de-la-voix)
-  - [5.5 Le cerveau : trois niveaux de réponse](#55-le-cerveau--trois-niveaux-de-réponse)
-  - [5.6 Émotions et expressions](#56-émotions-et-expressions)
-  - [5.7 Initiatives spontanées](#57-initiatives-spontanées)
-- [6. Référence technique](#6-référence-technique)
-  - [6.1 Modules](#61-modules-1)
-  - [6.2 Réglages et migrations](#62-réglages-et-migrations)
-  - [6.3 Seuil du micro borné](#63-seuil-du-micro-borné)
-  - [6.4 Émotions : table de correspondance](#64-émotions--table-de-correspondance)
-  - [6.5 Ajouter une réplique intégrée](#65-ajouter-une-réplique-intégrée)
-  - [6.6 Ajouter un moteur de voix](#66-ajouter-un-moteur-de-voix)
-  - [6.7 Niveaux de parole](#67-niveaux-de-parole)
-  - [6.8 Dépendances](#68-dépendances)
-- [7. Dépannage et pièges](#7-dépannage-et-pièges)
-- [8. Checklist](#8-checklist)
-- [9. Aller plus loin](#9-aller-plus-loin)
-- [10. Fichiers du projet](#10-fichiers-du-projet)
+- [2. Prérequis](#2-prérequis)
+- [3. Utilisation](#3-utilisation)
+  - [3.1 Lancer Capri](#31-lancer-capri)
+  - [3.2 Lui parler](#32-lui-parler)
+  - [3.3 Donner des ordres](#33-donner-des-ordres)
+  - [3.4 Apparitions, éclairs et phrases spontanées](#34-apparitions-éclairs-et-phrases-spontanées)
+  - [3.5 L'avatar et le menu de l'icône](#35-lavatar-et-le-menu-de-licône)
+  - [3.6 Choisir la voix](#36-choisir-la-voix)
+  - [3.7 Conversation libre (optionnel)](#37-conversation-libre-optionnel)
+- [4. Architecture et conception](#4-architecture-et-conception)
+  - [4.1 Vue d'ensemble](#41-vue-densemble)
+  - [4.2 De « Capri » à la réponse](#42-de--capri--à-la-réponse)
+  - [4.3 Reconnaissance du nom](#43-reconnaissance-du-nom)
+  - [4.4 Choix de la voix](#44-choix-de-la-voix)
+  - [4.5 Le cerveau : trois niveaux de réponse](#45-le-cerveau--trois-niveaux-de-réponse)
+  - [4.6 Émotions et expressions](#46-émotions-et-expressions)
+  - [4.7 Initiatives spontanées](#47-initiatives-spontanées)
+- [5. Référence technique](#5-référence-technique)
+  - [5.1 Modules](#51-modules-1)
+  - [5.2 Réglages et migrations](#52-réglages-et-migrations)
+  - [5.3 Seuil du micro borné](#53-seuil-du-micro-borné)
+  - [5.4 Émotions : table de correspondance](#54-émotions--table-de-correspondance)
+  - [5.5 Ajouter une réplique intégrée](#55-ajouter-une-réplique-intégrée)
+  - [5.6 Ajouter un moteur de voix](#56-ajouter-un-moteur-de-voix)
+  - [5.7 Niveaux de parole](#57-niveaux-de-parole)
+  - [5.8 Dépendances](#58-dépendances)
+- [6. Dépannage](#6-dépannage)
+- [7. Personnalisation](#7-personnalisation)
+- [8. Fichiers du projet](#8-fichiers-du-projet)
 
 ---
 
@@ -696,20 +656,7 @@ la lancer, à lui parler, à régler son comportement et à résoudre les probl�
 
 ---
 
-## 2. Ce que tu vas apprendre
-
-| Compétence | Tu sais... |
-|:-----------|:-----------|
-| Lancer Capri | Démarrer depuis le raccourci du bureau et retrouver son icône |
-| Lui parler | L'appeler par son nom, avec ou sans demande, même quand elle est cachée |
-| Donner des ordres | Ouvrir des applications, chercher sur le web, régler le volume, verrouiller le PC |
-| Régler son comportement | Choisir ses positions, la vitesse des éclairs et à quel point elle parle |
-| Personnaliser | Modifier ses phrases, sa voix et connecter un modèle de langage |
-| Dépanner | Diagnostiquer une écoute capricieuse ou un démarrage raté |
-
----
-
-## 3. Avant de commencer
+## 2. Prérequis
 
 | Élément | À vérifier |
 |:--------|:-----------|
@@ -722,11 +669,11 @@ la lancer, à lui parler, à régler son comportement et à résoudre les probl�
 
 ---
 
-## 4. Étapes
+## 3. Utilisation
 
-### Étape 1 – Lancer Capri
+### 3.1 Lancer Capri
 
-Démarre Capri depuis le bureau. (1 min)
+Démarre Capri depuis le bureau.
 
 1. **Double-clique sur le raccourci `Capri` du bureau** (créé par `creer_raccourci_bureau.bat`).
 2. Capri apparaît dans un éclair rose et vert.
@@ -742,15 +689,13 @@ Démarre Capri depuis le bureau. (1 min)
 > Pour changer les icônes, remplace ces fichiers puis relance `creer_raccourci_bureau.bat`. Relancer le raccourci
 > alors qu'elle tourne déjà ne crée pas de doublon : elle se montre simplement.
 
-**Point de contrôle :** Capri est visible à l'écran et son icône est dans la zone de notification.
-
-### Étape 2 – Lui parler
+### 3.2 Lui parler
 
 <p align="center">
   <img src="docs/images/capri_screen.png" alt="Capri à l'écoute" width="300">
 </p>
 
-Capri **écoute en permanence**, même cachée, mais elle n'obéit que si tu dis son nom. (5 min)
+Capri **écoute en permanence**, même cachée, mais elle n'obéit que si tu dis son nom.
 
 1. Dis **« Capri »** suivi de ta demande : *« Capri, quelle heure est-il ? »*
 2. Ou dis **« Capri »** seul, attends environ 1 seconde (elle apparaît si elle était cachée, ses yeux passent au vert),
@@ -776,9 +721,7 @@ Sans son nom, tout est ignoré (seule exception : le numéro à choisir quand el
 > Elle est **sourde pendant qu'elle parle**. Des délais très courts entre ses initiatives la font parler sans arrêt
 > et donc te rater.
 
-**Point de contrôle :** « Capri, quelle heure est-il ? » obtient une réponse parlée avec l'heure.
-
-### Étape 3 – Donner des ordres
+### 3.3 Donner des ordres
 
 <p align="center">
   <img src="docs/images/capri_search.png" alt="Capri cherche une information" width="300">
@@ -793,14 +736,12 @@ Sans son nom, tout est ignoré (seule exception : le numéro à choisir quand el
 | **Système** | « Capri, fais une capture d'écran », « verrouille la session », « éteins le PC » (10 s, « annule » pour annuler) |
 | **Capri** | « Capri, quitte » / « ferme-toi » (elle se ferme), « au revoir » (elle reste là) |
 
-**Point de contrôle :** « Capri, recherche youtube » ouvre une recherche dans le navigateur.
-
-### Étape 4 – Apparitions, éclairs et phrases spontanées
+### 3.4 Apparitions, éclairs et phrases spontanées
 
 Capri n'est pas obligée de rester sur l'écran : de temps en temps, **sans qu'on lui ait rien demandé**, elle disparaît,
 réapparaît à une **position aléatoire de l'écran**, se téléporte ou dit une phrase. Cachée, elle peut laisser **ses
 éclairs traverser l'écran** sans se montrer. Si tu la caches toi-même (clic droit sur l'icône), elle reste cachée
-jusqu'à ce que tu dises « Capri ». (10 min)
+jusqu'à ce que tu dises « Capri ».
 
 Ouvre `capri_config.json` (créé au premier lancement) et ajuste :
 
@@ -834,9 +775,7 @@ Texte brut, modifiable avec le Bloc-notes, **relu automatiquement** (pas besoin 
 [taquine] Tu sais, de là où je suis, ton écran ressemble à une ville pleine de lumières.
 ```
 
-**Point de contrôle :** avec `niveau_parole` à `bavarde`, elle apparaît, disparaît et parle sans que tu aies rien dit.
-
-### Étape 5 – L'avatar et le menu de l'icône
+### 3.5 L'avatar et le menu de l'icône
 
 | Action sur l'avatar | Effet |
 |:--------------------|:------|
@@ -867,9 +806,7 @@ Menu de l'icône (clic gauche : afficher / cacher ; clic droit : menu) :
 | Mode économie | Moins de ressources (automatique sur batterie) |
 | Afficher le statut / Quitter | |
 
-**Point de contrôle :** « Choix de la voix » puis une voix différente : elle dit une phrase pour l'essayer.
-
-### Étape 6 – Choisir la voix
+### 3.6 Choisir la voix
 
 <p align="center">
   <img src="docs/images/capri_self.png" alt="Capri parle" width="300">
@@ -881,7 +818,7 @@ Menu de l'icône (clic gauche : afficher / cacher ; clic droit : menu) :
 - `capri_config.json` → `voix` : `moteur` (`auto`, `capri`, `local` pour Piper, `edge`, `windows`), `fichier_voix`,
   `volume`, `muet`. `vitesse` et `hauteur` ne s'appliquent qu'aux voix de secours.
 
-### Étape 7 – Conversation libre (optionnel)
+### 3.7 Conversation libre (optionnel)
 
 Sans configuration, Capri répond avec ses répliques intégrées et propose une **recherche web** pour les questions
 ouvertes. Pour qu'elle discute librement avec la même personnalité, connecte un modèle de langage (API compatible
@@ -903,9 +840,9 @@ OpenAI) dans `capri_config.json`, section `llm` :
 
 ---
 
-## 5. Architecture et conception
+## 4. Architecture et conception
 
-### 5.1 Vue d'ensemble
+### 4.1 Vue d'ensemble
 
 Capri est un petit programme Python à **plusieurs threads** : un fil capte le micro, un autre reconnaît et interprète la
 parole, un troisième lui donne des initiatives, pendant que l'avatar dessine sa fenêtre translucide et que l'icône de la
@@ -938,7 +875,7 @@ flowchart LR
 | Fenêtre de l'avatar | Dessin à ~30 images/s dans une fenêtre Windows translucide |
 | Icône de notification | Menu, bascule des options |
 
-### 5.2 De « Capri » à la réponse
+### 4.2 De « Capri » à la réponse
 
 ```mermaid
 sequenceDiagram
@@ -965,7 +902,7 @@ sequenceDiagram
     V-->>A: niveau de bouche toutes les 20 ms
 ```
 
-### 5.3 Reconnaissance du nom
+### 4.3 Reconnaissance du nom
 
 ```mermaid
 flowchart TD
@@ -980,7 +917,7 @@ flowchart TD
     W -- non --> X["Ignorée"]
 ```
 
-### 5.4 Choix de la voix
+### 4.4 Choix de la voix
 
 ```mermaid
 flowchart LR
@@ -1032,7 +969,7 @@ classDiagram
 | `edge` | ❌ | Très bonne | `volume`, `vitesse`, `hauteur` |
 | `windows` (Hortense) | ✅ | Basique | `volume` |
 
-### 5.5 Le cerveau : trois niveaux de réponse
+### 4.5 Le cerveau : trois niveaux de réponse
 
 ```mermaid
 flowchart TD
@@ -1055,7 +992,7 @@ flowchart TD
 
 L'historique garde les 12 derniers messages ; le LLM reçoit la date et l'heure à chaque appel.
 
-### 5.6 Émotions et expressions
+### 4.6 Émotions et expressions
 
 Chaque réponse porte une **émotion** (du LLM via une étiquette entre crochets, ou de la réplique intégrée), qui choisit
 le sprite. La bouche suit la voix en trois niveaux (fermée, mi-ouverte, ouverte).
@@ -1090,7 +1027,7 @@ stateDiagram-v2
     repos --> repos: expression aléatoire toutes les 3 à 14 s
 ```
 
-### 5.7 Initiatives spontanées
+### 4.7 Initiatives spontanées
 
 ```mermaid
 flowchart TD
@@ -1112,9 +1049,9 @@ flowchart TD
 
 ---
 
-## 6. Référence technique
+## 5. Référence technique
 
-### 6.1 Modules
+### 5.1 Modules
 
 | Module | Classe / fonctions clés | Rôle |
 |:-------|:------------------------|:-----|
@@ -1127,7 +1064,7 @@ flowchart TD
 | `capri_config.py` | `charger`, `sauvegarder`, `DEFAUTS`, `MIGRATIONS` | Réglages versionnés |
 | `capri_sprites.py` | | Chargement et cache des images de `assets/` |
 
-### 6.2 Réglages et migrations
+### 5.2 Réglages et migrations
 
 `DEFAUTS` est fusionné avec `capri_config.json` ; modifier une valeur par défaut ne change donc pas une valeur déjà
 enregistrée. Pour imposer une nouvelle valeur une seule fois, on monte `VERSION_CONFIG` et on déclare la clé :
@@ -1140,7 +1077,7 @@ MIGRATIONS = {
 }
 ```
 
-### 6.3 Seuil du micro borné
+### 5.3 Seuil du micro borné
 
 La bibliothèque de reconnaissance fait dériver le seuil d'énergie vers 1 dans une pièce silencieuse (le moindre souffle
 déclenche alors un enregistrement). `Reconnaisseur` le garde entre `seuil_min` et `seuil_max` :
@@ -1156,7 +1093,7 @@ class Reconnaisseur(sr.Recognizer):
         self._seuil = max(self.plancher, min(self.plafond, valeur))
 ```
 
-### 6.4 Émotions : table de correspondance
+### 5.4 Émotions : table de correspondance
 
 ```python
 ETIQUETTES = {
@@ -1169,7 +1106,7 @@ ETIQUETTES = {
 Le LLM doit commencer sa réponse par l'une de ces étiquettes (elle n'est pas lue). `ClientLLM.repondre` la retire du
 texte et la convertit en sprite.
 
-### 6.5 Ajouter une réplique intégrée
+### 5.5 Ajouter une réplique intégrée
 
 Chaque entrée de `INTENTIONS` associe un nom, une expression régulière (sur le texte sans accents) et des répliques
 `(texte, émotion)`. Une réplique différente de la précédente est tirée à chaque fois :
@@ -1180,7 +1117,7 @@ Chaque entrée de `INTENTIONS` associe un nom, une expression régulière (sur l
 ]),
 ```
 
-### 6.6 Ajouter un moteur de voix
+### 5.6 Ajouter un moteur de voix
 
 1. Écris une classe avec `disponible()` et `synthese(texte, tempo, hauteur)` qui renvoie `(pcm 16 bits, fréquence)`,
    comme `MoteurCapri`.
@@ -1194,7 +1131,7 @@ def synthese(self, texte, tempo, hauteur):
     return pcm, int(self.modele.sample_rate)
 ```
 
-### 6.7 Niveaux de parole
+### 5.7 Niveaux de parole
 
 ```python
 NIVEAUX_PAROLE = {
@@ -1205,7 +1142,7 @@ NIVEAUX_PAROLE = {
 }
 ```
 
-### 6.8 Dépendances
+### 5.8 Dépendances
 
 | Paquet | Usage |
 |:-------|:------|
@@ -1220,7 +1157,7 @@ NIVEAUX_PAROLE = {
 
 ---
 
-## 7. Dépannage et pièges
+## 6. Dépannage
 
 | Symptôme | Cause probable | Comment confirmer | Solution |
 |:---------|:---------------|:------------------|:---------|
@@ -1237,20 +1174,7 @@ Options de test : `python assistant_vocal.py --muet` (sans son), `--sans-micro` 
 
 ---
 
-## 8. Checklist
-
-| Exigence | Fait |
-|:---------|:-----|
-| Le raccourci du bureau lance Capri et l'icône apparaît dans la zone de notification | |
-| « Capri, quelle heure est-il ? » obtient une réponse | |
-| Cachée, « Capri » seul la fait apparaître et elle écoute | |
-| Elle apparaît à des positions aléatoires de l'écran | |
-| La voix choisie dans le menu est bien celle utilisée | |
-| `niveau_parole` change visiblement sa fréquence de parole | |
-
----
-
-## 9. Aller plus loin
+## 7. Personnalisation
 
 - **Ses phrases** : ajoute tes propres lignes dans `phrases.txt`, avec une humeur par ligne.
 - **Son apparence** : remplace les images de `assets/` (voir `capri_sprites.py`) ; les noms de fichiers doivent suivre le
@@ -1259,7 +1183,7 @@ Options de test : `python assistant_vocal.py --muet` (sans son), `--sans-micro` 
 
 ---
 
-## 10. Fichiers du projet
+## 8. Fichiers du projet
 
 | Fichier | Utilité |
 |:--------|:--------|
