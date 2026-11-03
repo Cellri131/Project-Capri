@@ -1,11 +1,11 @@
-# 💾 Capri - Guide d'utilisation
+# Capri - Guide d'utilisation
 
 Capri est une entité numérique née dans le cyberespace (inspirée de Capri, *Cyberpunk: Edgerunners*).
 Elle flotte sur ton écran, t'écoute, te répond à voix haute et pilote ton PC.
 
 ---
 
-## 🚀 Lancer Capri
+## Lancer Capri
 
 **Double-clique sur le raccourci `Capri` du bureau.**
 (Il est créé par `creer_raccourci_bureau.bat`.)
@@ -19,7 +19,7 @@ notification) et `capri.ico` (fenêtre). Pour les changer, remplace ces fichiers
 
 ---
 
-## 🎯 Lui parler
+## Lui parler
 
 Capri **écoute en permanence**, même quand elle est cachée, mais elle n'obéit que si tu dis son nom :
 
@@ -55,7 +55,7 @@ elle ne parle pas pour ne pas te couvrir).
 | « Capri, tu vas bien ? » | Tous mes processus tournent correctement... |
 | « Capri, tu connais Python ? » | Quelques millions de lignes de code plus tard... |
 
-### 💻 Commandes
+### Commandes
 
 - **Infos** : « Capri, quelle heure est-il », « Capri, quel jour on est »
 - **Applications** : « Capri, ouvre Chrome », « lance Spotify », « ouvre la calculatrice », « ferme Discord »
@@ -66,7 +66,7 @@ elle ne parle pas pour ne pas te couvrir).
 
 ---
 
-## ⚡ Apparitions, disparitions et phrases spontanées
+## Apparitions, disparitions et phrases spontanées
 
 Capri n'est pas obligée de rester sur l'écran : de temps en temps, **sans qu'on lui ait rien demandé**, elle
 disparaît, réapparaît à une **position aléatoire de l'écran**, se téléporte, ou dit simplement une phrase.
@@ -92,7 +92,7 @@ seule (curieuse, rêveuse, amusée, soupçonneuse, allongée...).
     apparition/disparition ; `phrases.bavardage` : `false` pour qu'elle ne parle plus sans bouger.
   Tout se coupe aussi depuis le menu : *Apparitions automatiques* et *Déplacements automatiques*.
 
-### 📝 Le fichier `phrases.txt`
+### Le fichier `phrases.txt`
 
 Texte brut, modifiable avec le Bloc-notes, **relu automatiquement** (pas besoin de relancer Capri) :
 
@@ -106,7 +106,7 @@ Texte brut, modifiable avec le Bloc-notes, **relu automatiquement** (pas besoin 
 
 ---
 
-## 🖥️ L'avatar
+## L'avatar
 
 - **Clic gauche** : elle réagit. **Double-clic** : comme si tu disais « Capri » seul. **Glisser** : la déplacer.
 - **Clic droit** : mini-menu (cacher, se téléporter, voix, pause, quitter).
@@ -114,7 +114,7 @@ Texte brut, modifiable avec le Bloc-notes, **relu automatiquement** (pas besoin 
   et sa bouche suit sa voix. Inactive un moment, elle s'allonge et se détend.
 - Ce qu'elle dit s'affiche en bulle néon près d'elle.
 
-## 🎛️ Menu de l'icône (zone de notification)
+## Menu de l'icône (zone de notification)
 
 Clic gauche sur l'icône : afficher / cacher Capri. Clic droit :
 
@@ -134,7 +134,7 @@ Clic gauche sur l'icône : afficher / cacher Capri. Clic droit :
 
 ---
 
-## 🧠 Conversation libre (optionnel)
+## Conversation libre (optionnel)
 
 Sans configuration, Capri répond avec ses répliques intégrées et propose une **recherche web** pour les questions
 ouvertes. Pour qu'elle discute librement avec la même personnalité, connecte-lui un modèle de langage
@@ -154,7 +154,7 @@ ouvertes. Pour qu'elle discute librement avec la même personnalité, connecte-l
   `modele` = `llama3.1` (ou autre) et `"actif": true`.
 - Toute API compatible fonctionne (GitHub Models, LM Studio, OpenRouter...).
 
-## 🔊 La voix
+## La voix
 
 - Par défaut : **la voix de Capri**, générée hors ligne par Pocket-TTS à partir du fichier
   `capri_french.safetensors` (à garder à côté de `assistant_vocal.py` ; `pip install pocket-tts`). Le modèle
@@ -165,7 +165,7 @@ ouvertes. Pour qu'elle discute librement avec la même personnalité, connecte-l
 
 ---
 
-## 🔧 Dépannage
+## Dépannage
 
 ### Capri ne m'entend pas
 1. Lance `verifier_permissions_micro.bat` et autorise l'accès au micro aux applications de bureau.
@@ -187,7 +187,7 @@ Remplace `icon.ico` (raccourci), `icon.png` (zone de notification) et `capri.ico
 
 ---
 
-## 📁 Fichiers utiles
+## Fichiers utiles
 
 | Fichier | Utilité |
 |---------|---------|
