@@ -1,0 +1,79 @@
+{
+  "version": 3,
+  "avatar": {
+    "taille": "moyenne",
+    "opacite": 1.0,
+    "bulle": true,
+    "deplacements_auto": true,
+    "apparitions_auto": false,
+    "expressions_auto": true,
+    "cliquable": true,
+    "duree_teleportation": 0.2,
+    "duree_apparition": 0.5,
+    "duree_disparition": 0.45,
+    "positions": [
+      "aleatoire"
+    ],
+    "eclairs_cachee": true,
+    "eclairs_secondes": [
+      6,
+      25
+    ],
+    "position": "libre",
+    "x": 2540,
+    "y": 477
+  },
+  "voix": {
+    "moteur": "local",
+    "fichier_voix": "capri_french.safetensors",
+    "muet": false,
+    "volume": 0.9,
+    "vitesse": 1.05,
+    "hauteur": 1.04,
+    "edge_voix": "fr-FR-VivienneMultilingualNeural",
+    "windows_voix": "Hortense"
+  },
+  "ecoute": {
+    "anglais_secours": true,
+    "attente_demande_secondes": 10,
+    "alias_debut": [
+      "café",
+      "tapis",
+      "capi",
+      "kapi",
+      "cap"
+    ],
+    "alias_si_ordre": [
+      "prix",
+      "pris",
+      "pri",
+      "prie",
+      "pays",
+      "paris",
+      "capris"
+    ],
+    "seuil_min": 120,
+    "seuil_max": 800
+  },
+  "phrases": {
+    "probabilite": 0.8,
+    "bavardage": true,
+    "niveau_parole": "silencieuse",
+    "visible_secondes": [
+      5,
+      10
+    ],
+    "cachee_secondes": [
+      5,
+      7
+    ]
+  },
+  "llm": {
+    "actif": "auto",
+    "url": "https://api.openai.com/v1",
+    "modele": "gpt-4o-mini",
+    "cle_env": "OPENAI_API_KEY",
+    "cle": "",
+    "delai": 25
+  }
+}

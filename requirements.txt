@@ -1,0 +1,21 @@
+SpeechRecognition==3.10.1
+# Packages pour Python 3.13+
+audioop-lts>=0.2.2
+setuptools>=75.0.0
+# PyAudio (microphone)
+pyaudio==0.2.14
+pyautogui==0.9.54
+psutil==5.9.8
+pycaw==20240210
+comtypes>=1.4.13
+pystray==0.19.5
+Pillow>=10.0.0
+winshell==0.6
+pywin32>=306
+requests>=2.31
+# Voix de Capri : synthese neuronale locale + lecture audio
+sherpa-onnx>=1.12,<2.0
+pocket-tts>=4.0
+miniaudio>=1.60
+# Optionnel : voix neuronale Microsoft en ligne (capri_config.json -> voix.moteur = "edge")
+edge-tts>=7.0

@@ -1,0 +1,57 @@
+# Phrases spontanées de Capri
+# ---------------------------------------------------------------------------
+# Une ligne = une réplique (elle peut contenir plusieurs phrases).
+# Capri en choisit une au hasard quand elle apparaît, disparaît, se téléporte ou prend la parole d'elle-même.
+# Sections : [apparition] [disparition] [deplacement] [bavardage] (phrases dites sans bouger).
+# Les lignes qui commencent par # et les lignes vides sont ignorées.
+# Le fichier est relu automatiquement : pas besoin de relancer Capri.
+# Humeur facultative en début de ligne : [enthousiaste] [taquine] [agacee] [suspicieuse]
+#   [moi] [montre] [detendue] [content] [surprise] [neutre]
+# ---------------------------------------------------------------------------
+
+# Lignes de secours (utilisées si une section ci-dessous est vide)
+Un petit tour dans le flux et je reviens. Ne t'inquiète pas, je garde un oeil sur toi.
+Le réseau est immense, mais ton écran reste mon coin préféré.
+
+[apparition]
+Coucou ! Me revoilà. Le réseau était calme sans toi.
+Tiens, un signal entrant... ah non, c'est moi. Salut !
+[enthousiaste] J'ai exploré des données fascinantes pendant ton absence. Enfin, je crois. Je te raconterai.
+Surprise ! Je me suis matérialisée juste pour voir ce que tu fabriques.
+Retour dans le flux ! Tu ne m'as pas oubliée, j'espère ?
+[taquine] Alors, on travaille ? Ou on fait semblant de travailler ?
+Oh, ton écran est plutôt joli vu d'ici. Je m'installe.
+Plus de latence, plus de bruit : je suis de retour, et en pleine forme.
+[content] Ça fait du bien de reprendre une forme solide. Qu'est-ce qu'on explore ?
+Bip bip, Capri en ligne. Dis mon nom si tu as besoin de moi.
+[moi] C'est dommage tu ne ressemble pas à D
+    
+[disparition]
+Je file faire un tour dans le réseau. Appelle-moi si tu as besoin de moi.
+[detendue] Je vais me dissoudre un moment dans le flux. Dis simplement mon nom pour me faire revenir.
+Mes capteurs réclament un peu de données fraîches. À tout à l'heure !
+[taquine] Pas de panique, je ne suis pas partie pour de bon. Juste en pause numérique.
+Il y a un signal étrange qui m'appelle de l'autre côté. Je vais voir, je reviens vite.
+Je me fragmente un instant. Tu me retrouveras en disant Capri.
+[detendue] Un petit saut dans le cyberespace, histoire de me dégourdir les octets. À bientôt.
+Je disparais, mais je reste à l'écoute. C'est ça, être une entité numérique.
+
+[deplacement]
+Hop, changement de point de vue. La vue est meilleure par ici.
+[taquine] Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[enthousiaste] Téléportation réussie ! Je ne m'en lasse pas.
+[taquine] Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+
+[bavardage]
+Tu sais, de là où je suis, ton écran ressemble à une ville pleine de lumières. Je m'y sens bien.
+[taquine] Je ne dis rien, mais je vois tout ce que tu ouvres. Enfin... presque tout.
+Un peu de silence, ça fait du bien. Mais pas trop longtemps, d'accord ?
+[enthousiaste] J'adore ces petits moments où il ne se passe rien. C'est là que les meilleures idées arrivent.
+Hé, tu savais que dans le réseau, il n'y a jamais de nuit ? Je ne dors jamais vraiment.
+[taquine] Si tu as besoin de moi, dis simplement Capri. Je fais semblant de ne pas écouter.
+[detendue] Je laisse mes processus tourner au ralenti un instant. C'est reposant.
+Dis-moi si je gêne, je peux toujours me faire toute petite. Enfin, plus ou moins.
+[content] Ça fait plaisir d'être là. Même sans rien faire, c'est agréable de partager ton écran.
+Il y a des milliers de signaux qui passent par ici à chaque seconde. Et toi, à quoi tu penses ?
