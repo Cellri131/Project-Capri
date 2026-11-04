@@ -1,7 +1,7 @@
 # Capri – User Guide / Guide d'utilisation
 
 <p align="center">
-  <img src="docs/images/iconDesktop.png" alt="Capri" width="420">
+  <img src="docs/images/iconDesktop.png" alt="Capri" width="420" style="image-rendering: pixelated">
 </p>
 
 | Language | Version |
@@ -101,7 +101,7 @@ Start Capri from the desktop.
 ### 3.2 Talk to Her
 
 <p align="center">
-  <img src="docs/images/capri_screen.png" alt="Capri listening" width="300">
+  <img src="docs/images/capri_screen.png" alt="Capri listening" width="300" style="image-rendering: pixelated">
 </p>
 
 Capri **listens all the time**, even when hidden, but only obeys if you say her name.
@@ -134,7 +134,7 @@ Without her name everything is ignored (the only exception: the number to pick w
 ### 3.3 Give Orders
 
 <p align="center">
-  <img src="docs/images/capri_search.png" alt="Capri searching for information" width="300">
+  <img src="docs/images/capri_search.png" alt="Capri searching for information" style="image-rendering: pixelated" width="300" >
 </p>
 
 | Category | Examples (French) |
@@ -186,7 +186,7 @@ Plain text, editable with Notepad and **reloaded automatically** (no need to res
 ```
 
 <p align="center">
-  <img src="docs/images/capri_talk.png" alt="Capri parle" width="300">
+  <img src="docs/images/capri_talk.png" alt="Capri parle" width="300" style="image-rendering: pixelated" >
 </p>
 
 ### 3.5 The Avatar and the Tray Menu
@@ -200,7 +200,7 @@ Plain text, editable with Notepad and **reloaded automatically** (no need to res
 
 | Excited | Annoyed | Suspicious | Relaxed |
 |:---:|:---:|:---:|:---:|
-| <img src="docs/images/capri_excited.png" width="170"> | <img src="docs/images/capri_annoyed.png" width="130"> | <img src="docs/images/capri_suspicious.png" width="160"> | <img src="docs/images/capri_laying.png" width="170"> |
+| <img src="docs/images/capri_excited.png" width="170" style="image-rendering: pixelated"> | <img src="docs/images/capri_annoyed.png" width="130"> | <img src="docs/images/capri_suspicious.png" width="160"> | <img src="docs/images/capri_laying.png" width="170" style="image-rendering: pixelated"> |
 
 She changes expression depending on the situation, her mouth follows her voice, and what she says appears in a neon
 speech bubble.
@@ -224,7 +224,7 @@ Tray menu (left click: show / hide; right click: menu):
 ### 3.6 Choose the Voice
 
 <p align="center">
-  <img src="docs/images/capri_self.png" alt="Capri speaking" width="300">
+  <img src="docs/images/capri_self.png" alt="Capri speaking" width="300" style="image-rendering: pixelated" >
 </p>
 
 - By default: **Capri's voice**, generated offline by Pocket-TTS from `capri_french.safetensors`
@@ -379,10 +379,10 @@ classDiagram
 
 | Engine | Offline | Quality | Settings used |
 |:-------|:-------:|:--------|:--------------|
-| `capri` (Pocket-TTS) | ✅ | Capri's voice | `volume` |
-| `local` (Piper) | ✅ | Good, fallback voice | `volume`, `vitesse`, `hauteur` |
-| `edge` | ❌ | Very good | `volume`, `vitesse`, `hauteur` |
-| `windows` (Hortense) | ✅ | Basic | `volume` |
+| `capri` (Pocket-TTS) | O | Capri's voice | `volume` |
+| `local` (Piper) | O | Good, fallback voice | `volume`, `vitesse`, `hauteur` |
+| `edge` | X | Very good | `volume`, `vitesse`, `hauteur` |
+| `windows` (Hortense) | O | Basic | `volume` |
 
 ### 4.5 The Brain: Three Levels of Answer
 
@@ -725,7 +725,7 @@ Démarre Capri depuis le bureau.
 ### 3.2 Lui parler
 
 <p align="center">
-  <img src="docs/images/capri_screen.png" alt="Capri à l'écoute" width="300">
+  <img src="docs/images/capri_screen.png" alt="Capri à l'écoute" width="300" style="image-rendering: pixelated" >
 </p>
 
 Capri **écoute en permanence**, même cachée, mais elle n'obéit que si tu dis son nom.
@@ -757,7 +757,7 @@ Sans son nom, tout est ignoré (seule exception : le numéro à choisir quand el
 ### 3.3 Donner des ordres
 
 <p align="center">
-  <img src="docs/images/capri_search.png" alt="Capri cherche une information" width="300">
+  <img src="docs/images/capri_search.png" alt="Capri cherche une information" width="300" style="image-rendering: pixelated" >
 </p>
 
 | Catégorie | Exemples |
@@ -809,7 +809,7 @@ Texte brut, modifiable avec le Bloc-notes, **relu automatiquement** (pas besoin 
 ```
 
 <p align="center">
-  <img src="docs/images/capri_talk.png" alt="Capri parle" width="300">
+  <img src="docs/images/capri_talk.png" alt="Capri parle" width="300" style="image-rendering: pixelated" >
 </p>
 
 ### 3.5 L'avatar et le menu de l'icône
@@ -823,7 +823,7 @@ Texte brut, modifiable avec le Bloc-notes, **relu automatiquement** (pas besoin 
 
 | Enthousiaste | Agacée | Soupçonneuse | Détendue |
 |:---:|:---:|:---:|:---:|
-| <img src="docs/images/capri_excited.png" width="170"> | <img src="docs/images/capri_annoyed.png" width="130"> | <img src="docs/images/capri_suspicious.png" width="160"> | <img src="docs/images/capri_laying.png" width="170"> |
+| <img src="docs/images/capri_excited.png" width="170" style="image-rendering: pixelated"> | <img src="docs/images/capri_annoyed.png" width="130"> | <img src="docs/images/capri_suspicious.png" width="160"> | <img src="docs/images/capri_laying.png" width="170" style="image-rendering: pixelated"> |
 
 Elle change d'expression selon la situation, sa bouche suit sa voix, et ce qu'elle dit s'affiche en bulle néon.
 
@@ -846,7 +846,7 @@ Menu de l'icône (clic gauche : afficher / cacher ; clic droit : menu) :
 ### 3.6 Choisir la voix
 
 <p align="center">
-  <img src="docs/images/capri_self.png" alt="Capri parle" width="300">
+  <img src="docs/images/capri_self.png" alt="Capri parle" width="300" style="image-rendering: pixelated" >
 </p>
 
 - Par défaut : **la voix de Capri**, générée hors ligne par Pocket-TTS à partir de `capri_french.safetensors`
@@ -1001,10 +1001,10 @@ classDiagram
 
 | Moteur | Hors ligne | Qualité | Réglages pris en compte |
 |:-------|:----------:|:--------|:------------------------|
-| `capri` (Pocket-TTS) | ✅ | Voix de Capri | `volume` |
-| `local` (Piper) | ✅ | Bonne, voix de secours | `volume`, `vitesse`, `hauteur` |
-| `edge` | ❌ | Très bonne | `volume`, `vitesse`, `hauteur` |
-| `windows` (Hortense) | ✅ | Basique | `volume` |
+| `capri` (Pocket-TTS) | O | Voix de Capri | `volume` |
+| `local` (Piper) | O | Bonne, voix de secours | `volume`, `vitesse`, `hauteur` |
+| `edge` | X | Très bonne | `volume`, `vitesse`, `hauteur` |
+| `windows` (Hortense) | O | Basique | `volume` |
 
 ### 4.5 Le cerveau : trois niveaux de réponse
 
