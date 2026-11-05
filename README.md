@@ -158,6 +158,7 @@ Open `capri_config.json` (created on first launch) and adjust:
 | Key | Purpose | Default |
 |:----|:--------|:--------|
 | `avatar.duree_teleportation` / `duree_apparition` / `duree_disparition` | Lightning duration in seconds (smaller = faster) | 0.6 / 0.5 / 0.45 |
+| `avatar.frequence_teleportation` | `jamais`, `rare`, `normale`, `frequente`, `intense` (also in the tray menu "Automatic teleportation"): delay between two teleports, 3-7 min / 1-3 min / 15-60 s / 5-20 s | `normale` |
 | `avatar.positions` | `aleatoire` (anywhere) or `bas_droite`, `bas_gauche`, `haut_droite`, `haut_gauche`, `centre` (mixable, repeat a name to make it likelier) | `["aleatoire"]` |
 | `avatar.eclairs_cachee` | Lightning crossing the screen while she is hidden | `true` |
 | `avatar.eclairs_secondes` | Min/max delay between two bolts | `[6, 25]` |
@@ -212,7 +213,8 @@ Tray menu (left click: show / hide; right click: menu):
 | Show / Hide Capri | Toggle display |
 | **Teleport** | Bottom/top, left/right, centre, random |
 | **Size** | Small, medium, large |
-| Automatic appearances / moves, text bubbles | Checkboxes |
+| **Automatic teleportation** | Never / rare / normal / frequent / intense: how often she teleports on her own |
+| Automatic appearances, text bubbles | Checkboxes |
 | Clickable | Off: clicks go through Capri |
 | **Voice** | On / off (she then keeps going with subtitles) |
 | **Voice choice** | Automatic, Capri's voice, Piper, Windows, Edge (she says a phrase to try it) |
@@ -446,17 +448,18 @@ stateDiagram-v2
 
 ```mermaid
 flowchart TD
-    T["Delay drawn in visible_secondes or cachee_secondes<br/>× talk-level multiplier"] --> D{"Available?<br/>not speaking, listening or in transition"}
-    D -- no --> T
+    T["Delay drawn in visible_secondes or cachee_secondes<br/>× talk-level multiplier"] --> D{"Available?<br/>not speaking or handling a request"}
+    D -- no --> W["Retry every second<br/>forced after 45 s of blockage"]
+    W --> D
     D -- yes --> V{"Visible?"}
     V -- yes --> CH["Weighted choice"]
     CH --> A1["Disappear (2)"]
-    CH --> A2["Teleport (1)"]
     CH --> A3["Chat (2)"]
     V -- no --> A4["Reappear: lightning + random position"]
     V -- no --> A5["Lightning crossing the screen"]
+    TP["Own timer<br/>frequence_teleportation"] --> A2["Teleport"]
     A1 --> T
-    A2 --> T
+    A2 --> TP
     A3 --> T
     A4 --> T
     A5 --> T
@@ -781,6 +784,7 @@ Ouvre `capri_config.json` (créé au premier lancement) et ajuste :
 | Clé | Rôle | Défaut |
 |:----|:-----|:-------|
 | `avatar.duree_teleportation` / `duree_apparition` / `duree_disparition` | Durée des éclairs en secondes (plus petit = plus rapide) | 0.6 / 0.5 / 0.45 |
+| `avatar.frequence_teleportation` | `jamais`, `rare`, `normale`, `frequente`, `intense` (aussi dans le menu « Téléportation automatique ») : délai entre deux téléportations, 3-7 min / 1-3 min / 15-60 s / 5-20 s | `normale` |
 | `avatar.positions` | `aleatoire` (n'importe où) ou `bas_droite`, `bas_gauche`, `haut_droite`, `haut_gauche`, `centre` (mélangeables, répéter un nom augmente ses chances) | `["aleatoire"]` |
 | `avatar.eclairs_cachee` | Éclairs qui traversent l'écran pendant qu'elle est cachée | `true` |
 | `avatar.eclairs_secondes` | Délai min/max entre deux éclairs | `[6, 25]` |
@@ -834,7 +838,8 @@ Menu de l'icône (clic gauche : afficher / cacher ; clic droit : menu) :
 | Afficher / Cacher Capri | Bascule l'affichage |
 | **Se téléporter** | Bas/haut, gauche/droite, centre, au hasard |
 | **Taille** | Petite, moyenne, grande |
-| Apparitions / déplacements automatiques, bulles de texte | Cases à cocher |
+| **Téléportation automatique** | Jamais / rare / normale / fréquente / intense : à quelle fréquence elle se téléporte d'elle-même |
+| Apparitions automatiques, bulles de texte | Cases à cocher |
 | Cliquable | Désactivé : les clics traversent Capri |
 | **Voix** | Activer / couper (elle continue alors en sous-titres) |
 | **Choix de la voix** | Automatique, voix de Capri, Piper, Windows, Edge (elle dit une phrase pour l'essayer) |
@@ -1068,17 +1073,18 @@ stateDiagram-v2
 
 ```mermaid
 flowchart TD
-    T["Délai tiré dans visible_secondes ou cachee_secondes<br/>× multiplicateur du niveau de parole"] --> D{"Disponible ?<br/>ni parole, ni écoute, ni transition"}
-    D -- non --> T
+    T["Délai tiré dans visible_secondes ou cachee_secondes<br/>× multiplicateur du niveau de parole"] --> D{"Disponible ?<br/>ni parole, ni demande en cours"}
+    D -- non --> W["Nouvel essai chaque seconde<br/>forcé après 45 s de blocage"]
+    W --> D
     D -- oui --> V{"Visible ?"}
     V -- oui --> CH["Choix pondéré"]
     CH --> A1["Disparaître (2)"]
-    CH --> A2["Se téléporter (1)"]
     CH --> A3["Bavarder (2)"]
     V -- non --> A4["Réapparaître : éclair + position aléatoire"]
     V -- non --> A5["Éclair qui traverse l'écran"]
+    TP["Minuteur propre<br/>frequence_teleportation"] --> A2["Se téléporter"]
     A1 --> T
-    A2 --> T
+    A2 --> TP
     A3 --> T
     A4 --> T
     A5 --> T

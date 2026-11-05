@@ -36,7 +36,9 @@ DEFAUTS = {
         "taille": "moyenne",            # petite | moyenne | grande
         "opacite": 1.0,                 # 0.3 -> 1.0
         "bulle": True,                  # sous-titres près de Capri
-        "deplacements_auto": True,      # téléportations spontanées
+        "deplacements_auto": True,      # téléportations spontanées (False = jamais)
+        # jamais | rare | normale | frequente | intense (menu « Téléportation automatique »)
+        "frequence_teleportation": "normale",
         "apparitions_auto": True,       # elle disparaît et réapparaît d'elle-même
         "expressions_auto": True,       # elle change d'expression toute seule quand on ne lui dit rien
         "cliquable": True,              # False : les clics traversent Capri (elle ne peut plus être déplacée)

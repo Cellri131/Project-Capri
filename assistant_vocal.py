@@ -98,6 +98,7 @@ class AssistantVocal:
         self._cachee_auto = False       # vrai si elle a disparu d'elle-même (et peut donc revenir seule)
         self._prochaine_initiative = 0.0
         self._prochain_eclair = 0.0
+        self._prochaine_teleportation = 0.0
         self.tray_icon = None
         self.thread_ecoute = None
         self.file_audio = queue.Queue(maxsize=4)
@@ -431,13 +432,60 @@ class AssistantVocal:
         mult = self._niveau_parole()[2]
         self._prochaine_initiative = time.monotonic() + random.uniform(min(bas, haut), max(bas, haut)) * mult
 
+    # fréquence de téléportation -> (délai min, délai max) en secondes entre deux téléportations ; None = jamais
+    FREQUENCES_TELEPORTATION = {
+        "jamais": None,
+        "rare": (150, 400),
+        "normale": (60, 180),
+        "frequente": (15, 60),
+        "intense": (5, 20),
+    }
+
+    def _frequence_teleportation(self):
+        conf = self.config["avatar"]
+        nom = conf.get("frequence_teleportation", "normale")
+        if not conf.get("deplacements_auto", True):
+            nom = "jamais"
+        return nom, self.FREQUENCES_TELEPORTATION.get(nom, self.FREQUENCES_TELEPORTATION["normale"])
+
+    def _planifier_teleportation(self):
+        delais = self._frequence_teleportation()[1]
+        if delais is None:
+            self._prochaine_teleportation = float("inf")
+        else:
+            self._prochaine_teleportation = time.monotonic() + random.uniform(*delais)
+
+    def _raison_indisponible(self, forcer=False):
+        """Pourquoi Capri ne peut pas prendre d'initiative maintenant (None si elle le peut).
+
+        Quand l'initiative est bloquée depuis trop longtemps (bruit continu, vidéo, animation coincée),
+        `forcer` ne garde que les vrais empêchements : pause, parole en cours, demande en cours.
+        """
+        if self.en_pause:
+            return "en pause"
+        if self.voix.en_cours:
+            return "elle parle"
+        if self._occupee:
+            return "demande en cours de traitement"
+        if self.handler.choix_actif():
+            return "choix en attente"
+        if forcer:
+            return None
+        maintenant = time.monotonic()
+        if maintenant < self.fin_attente:
+            return "attend ta demande"
+        if maintenant - self.dernier_son <= 4:
+            return "du son est capté (bruit ou voix)"
+        if not self.file_audio.empty():
+            return "audio en attente de reconnaissance"
+        if self.avatar.en_transition or self.avatar.en_traversee:
+            return "animation en cours"
+        if self.avatar.mode_courant not in ("repos", "dort"):
+            return f"mode '{self.avatar.mode_courant}'"
+        return None
+
     def _disponible(self):
-        """Capri ne prend l'initiative que lorsqu'elle n'est ni en train d'écouter ni de parler, ni quand on parle."""
-        return (not self.en_pause and not self.voix.en_cours and not self._occupee
-                and time.monotonic() >= self.fin_attente and not self.handler.choix_actif()
-                and time.monotonic() - self.dernier_son > 4 and self.file_audio.empty()
-                and not self.avatar.en_transition and not self.avatar.en_traversee
-                and self.avatar.mode_courant in ("repos", "dort"))
+        return self._raison_indisponible() is None
 
     def _dire_spontane(self, section, probabilite=None):
         if probabilite is None:
@@ -467,46 +515,77 @@ class AssistantVocal:
         self._planifier(visible=True)
         self._prochaine_initiative = max(self._prochaine_initiative, time.monotonic() + 20)
         self._planifier_eclair()
+        self._planifier_teleportation()
+        bloquee_depuis = None
+        dernier_rapport = 0.0
         while self.actif:
             time.sleep(1.0)
-            if not self._disponible():
-                if time.monotonic() >= self._prochaine_initiative:
-                    self._prochaine_initiative = time.monotonic() + 5
-                continue
-            # cachée d'elle-même : des éclairs continuent de traverser l'écran, comme si elle voyageait dans le réseau
-            if (self._cachee_auto and not self.avatar.visible and time.monotonic() >= self._prochain_eclair
-                    and self.config["avatar"].get("eclairs_cachee", True)):
-                self.avatar.eclair_traversant()
-                self._planifier_eclair()
-                continue
-            if time.monotonic() < self._prochaine_initiative:
-                continue
-            conf_avatar = self.config["avatar"]
-            options = []   # (action, poids)
-            if conf_avatar.get("apparitions_auto", True):
-                options.append((self._initiative_disparition, 2))
-            if conf_avatar.get("deplacements_auto", True):
-                options.append((self._initiative_deplacement, 1))
-            bavarde = self._niveau_parole()[1]
-            if self.config["phrases"].get("bavardage", True) if bavarde is None else bavarde:
-                options.append((self._initiative_bavardage, 2))
-            self._autonome_actif = True
             try:
-                if self.avatar.visible:
-                    if options:
-                        actions, poids = zip(*options)
-                        random.choices(actions, weights=poids)[0]()
-                    else:
-                        self._planifier(visible=True)
-                elif self._cachee_auto:
-                    self._initiative_apparition()
-                else:
-                    self._planifier(visible=False)   # cachée à la demande de l'utilisateur : elle reste cachée
-            except Exception as e:
-                cfg.journal(f"Erreur pendant une initiative: {e}\n{traceback.format_exc()}")
+                bloquee_depuis, dernier_rapport = self._tour_autonome(bloquee_depuis, dernier_rapport)
+            except Exception as e:   # une erreur ne doit jamais arrêter définitivement les initiatives
+                cfg.journal(f"Erreur dans la boucle d'initiatives: {e}\n{traceback.format_exc()}")
+                time.sleep(5)
+
+    def _tour_autonome(self, bloquee_depuis, dernier_rapport):
+        maintenant = time.monotonic()
+        visible = self.avatar.visible
+        if not visible:
+            self._planifier_teleportation()   # le délai ne court que lorsqu'elle est à l'écran
+        eclair = (self._cachee_auto and not visible and self.config["avatar"].get("eclairs_cachee", True)
+                  and maintenant >= self._prochain_eclair)
+        teleportation = visible and maintenant >= self._prochaine_teleportation
+        initiative = maintenant >= self._prochaine_initiative
+        if not (eclair or teleportation or initiative):
+            return None, dernier_rapport
+
+        if bloquee_depuis is None:
+            bloquee_depuis = maintenant
+        raison = self._raison_indisponible(forcer=maintenant - bloquee_depuis > 45)
+        if raison:
+            if maintenant - dernier_rapport > 60 and maintenant - bloquee_depuis > 20:
+                cfg.journal(f"Initiative retardée : {raison}")
+                dernier_rapport = maintenant
+            return bloquee_depuis, dernier_rapport
+        bloquee_depuis = None
+
+        # cachée d'elle-même : des éclairs continuent de traverser l'écran, comme si elle voyageait dans le réseau
+        if eclair:
+            self.avatar.eclair_traversant()
+            self._planifier_eclair()
+            return None, dernier_rapport
+
+        self._autonome_actif = True
+        try:
+            if teleportation:
+                self._initiative_teleportation()
+            elif initiative:
+                self._lancer_initiative(visible)
+        except Exception as e:
+            cfg.journal(f"Erreur pendant une initiative: {e}\n{traceback.format_exc()}")
+            self._planifier(visible=True)
+            self._planifier_teleportation()
+        finally:
+            self._autonome_actif = False
+        return None, dernier_rapport
+
+    def _lancer_initiative(self, visible):
+        conf_avatar = self.config["avatar"]
+        options = []   # (action, poids)
+        if conf_avatar.get("apparitions_auto", True):
+            options.append((self._initiative_disparition, 2))
+        bavarde = self._niveau_parole()[1]
+        if self.config["phrases"].get("bavardage", True) if bavarde is None else bavarde:
+            options.append((self._initiative_bavardage, 2))
+        if visible:
+            if options:
+                actions, poids = zip(*options)
+                random.choices(actions, weights=poids)[0]()
+            else:
                 self._planifier(visible=True)
-            finally:
-                self._autonome_actif = False
+        elif self._cachee_auto:
+            self._initiative_apparition()
+        else:
+            self._planifier(visible=False)   # cachée à la demande de l'utilisateur : elle reste cachée
 
     def _initiative_disparition(self):
         self._dire_spontane("disparition")
@@ -528,11 +607,13 @@ class AssistantVocal:
         self._dire_spontane("apparition")
         self._planifier(visible=True)
 
-    def _initiative_deplacement(self):
+    def _initiative_teleportation(self):
         self.avatar.teleporter("hasard")
         self._attendre_effet("teleportation")
-        self._dire_spontane("deplacement")
-        self._planifier(visible=True)
+        # quand elle se téléporte souvent, elle ne commente pas chaque saut
+        frequent = self._frequence_teleportation()[0] in ("frequente", "intense")
+        self._dire_spontane("deplacement", probabilite=0.3 if frequent else None)
+        self._planifier_teleportation()
 
     def _initiative_bavardage(self):
         """Une phrase de phrases.txt, sans bouger : elle se manifeste simplement."""
@@ -597,6 +678,13 @@ class AssistantVocal:
         cfg.journal(f"Niveau de bavardage : {niveau}")
         self._planifier(visible=self.avatar.visible)
 
+    def changer_frequence_teleportation(self, niveau):
+        self.config["avatar"]["frequence_teleportation"] = niveau
+        self.config["avatar"]["deplacements_auto"] = niveau != "jamais"
+        cfg.sauvegarder(self.config)
+        cfg.journal(f"Fréquence de téléportation : {niveau}")
+        self._planifier_teleportation()
+
     def basculer_option(self, section, cle):
         self.config[section][cle] = not self.config[section].get(cle, True)
         cfg.sauvegarder(self.config)
@@ -653,6 +741,10 @@ class AssistantVocal:
             return item(libelle, lambda icon, i: self.changer_niveau_parole(nom),
                         checked=lambda i: self.config["phrases"].get("niveau_parole", "normale") == nom, radio=True)
 
+        def teleportation(nom, libelle):
+            return item(libelle, lambda icon, i: self.changer_frequence_teleportation(nom),
+                        checked=lambda i: self._frequence_teleportation()[0] == nom, radio=True)
+
         return pystray.Menu(
             item(lambda i: 'Cacher Capri' if self.avatar.visible else 'Afficher Capri', self.basculer_avatar, default=True),
             item('Se téléporter', pystray.Menu(
@@ -663,8 +755,11 @@ class AssistantVocal:
             item('Taille', pystray.Menu(taille("petite", "Petite"), taille("moyenne", "Moyenne"), taille("grande", "Grande"))),
             item('Apparitions automatiques', lambda icon, i: self.basculer_option("avatar", "apparitions_auto"),
                  checked=lambda i: a.get("apparitions_auto", True)),
-            item('Déplacements automatiques', lambda icon, i: self.basculer_option("avatar", "deplacements_auto"),
-                 checked=lambda i: a.get("deplacements_auto", True)),
+            item('Téléportation automatique', pystray.Menu(
+                teleportation("jamais", "Jamais"), teleportation("rare", "Rare (toutes les 3 à 7 min)"),
+                teleportation("normale", "Normale (toutes les 1 à 3 min)"),
+                teleportation("frequente", "Fréquente (toutes les 15 à 60 s)"),
+                teleportation("intense", "Intense (toutes les 5 à 20 s)"))),
             item('Bulles de texte', lambda icon, i: self.basculer_option("avatar", "bulle"),
                  checked=lambda i: a.get("bulle", True)),
             item('Cliquable (déplaçable à la souris)', self.basculer_cliquable,
