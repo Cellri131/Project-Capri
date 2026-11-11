@@ -9,7 +9,7 @@
     "apparitions_auto": true,
     "expressions_auto": true,
     "cliquable": true,
-    "duree_teleportation": 0.6,
+    "duree_teleportation": 0.2,
     "duree_apparition": 0.5,
     "duree_disparition": 0.45,
     "positions": [
@@ -21,8 +21,8 @@
       25
     ],
     "position": "libre",
-    "x": 2177,
-    "y": 807
+    "x": 1572,
+    "y": 526
   },
   "voix": {
     "moteur": "local",

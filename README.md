@@ -159,6 +159,7 @@ Open `capri_config.json` (created on first launch) and adjust:
 |:----|:--------|:--------|
 | `avatar.duree_teleportation` / `duree_apparition` / `duree_disparition` | Lightning duration in seconds (smaller = faster) | 0.6 / 0.5 / 0.45 |
 | `avatar.frequence_teleportation` | `jamais`, `rare`, `normale`, `frequente`, `intense` (also in the tray menu "Automatic teleportation"): delay between two teleports, 3-7 min / 1-3 min / 15-60 s / 5-20 s | `normale` |
+| `avatar.se_percher` | When autonomous, she sometimes perches on the top edge of an open window (`capri_OnPanel` sprite; half of her sits on the title bar). Also in the tray menu | `true` |
 | `avatar.positions` | `aleatoire` (anywhere) or `bas_droite`, `bas_gauche`, `haut_droite`, `haut_gauche`, `centre` (mixable, repeat a name to make it likelier) | `["aleatoire"]` |
 | `avatar.eclairs_cachee` | Lightning crossing the screen while she is hidden | `true` |
 | `avatar.eclairs_secondes` | Min/max delay between two bolts | `[6, 25]` |
@@ -212,8 +213,9 @@ Tray menu (left click: show / hide; right click: menu):
 |:------|:--------|
 | Show / Hide Capri | Toggle display |
 | **Teleport** | Bottom/top, left/right, centre, random |
-| **Size** | Small, medium, large |
+| **Size** | Small, medium, large. "Small" switches to the slim sprites (`slim` folder) |
 | **Automatic teleportation** | Never / rare / normal / frequent / intense: how often she teleports on her own |
+| **Perch on windows** | Lets her sit on the top edge of the windows in the foreground when she is idle |
 | Automatic appearances, text bubbles | Checkboxes |
 | Clickable | Off: clicks go through Capri |
 | **Voice** | On / off (she then keeps going with subtitles) |
@@ -785,6 +787,7 @@ Ouvre `capri_config.json` (créé au premier lancement) et ajuste :
 |:----|:-----|:-------|
 | `avatar.duree_teleportation` / `duree_apparition` / `duree_disparition` | Durée des éclairs en secondes (plus petit = plus rapide) | 0.6 / 0.5 / 0.45 |
 | `avatar.frequence_teleportation` | `jamais`, `rare`, `normale`, `frequente`, `intense` (aussi dans le menu « Téléportation automatique ») : délai entre deux téléportations, 3-7 min / 1-3 min / 15-60 s / 5-20 s | `normale` |
+| `avatar.se_percher` | En autonomie, elle s'assoit parfois sur le bord haut d'une fenêtre ouverte (sprite `capri_OnPanel` : la moitié du corps sur la barre de titre). Aussi dans le menu | `true` |
 | `avatar.positions` | `aleatoire` (n'importe où) ou `bas_droite`, `bas_gauche`, `haut_droite`, `haut_gauche`, `centre` (mélangeables, répéter un nom augmente ses chances) | `["aleatoire"]` |
 | `avatar.eclairs_cachee` | Éclairs qui traversent l'écran pendant qu'elle est cachée | `true` |
 | `avatar.eclairs_secondes` | Délai min/max entre deux éclairs | `[6, 25]` |
@@ -837,8 +840,9 @@ Menu de l'icône (clic gauche : afficher / cacher ; clic droit : menu) :
 |:-------|:-----|
 | Afficher / Cacher Capri | Bascule l'affichage |
 | **Se téléporter** | Bas/haut, gauche/droite, centre, au hasard |
-| **Taille** | Petite, moyenne, grande |
+| **Taille** | Petite, moyenne, grande. « Petite » utilise les sprites fins (dossier `slim`) |
 | **Téléportation automatique** | Jamais / rare / normale / fréquente / intense : à quelle fréquence elle se téléporte d'elle-même |
+| **Se percher sur les fenêtres** | Elle s'assoit sur le bord haut des fenêtres au premier plan quand elle est tranquille |
 | Apparitions automatiques, bulles de texte | Cases à cocher |
 | Cliquable | Désactivé : les clics traversent Capri |
 | **Voix** | Activer / couper (elle continue alors en sous-titres) |

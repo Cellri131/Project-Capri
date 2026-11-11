@@ -172,6 +172,60 @@ def zone_de_travail():
     return 0, 0, user32.GetSystemMetrics(SM_CXSCREEN), user32.GetSystemMetrics(SM_CYSCREEN)
 
 
+def fenetres_au_premier_plan(ignorer_hwnd=None, zone=None, maximum=8):
+    """Rectangles (gauche, haut, droite, bas) des fenêtres visibles les plus en avant, de la plus haute à la plus basse."""
+    dwm = ctypes.windll.dwmapi
+    for f in (user32.IsWindowVisible, user32.IsIconic, user32.GetWindowTextLengthW):
+        f.argtypes = [wt.HWND]
+    user32.GetClassNameW.argtypes = [wt.HWND, wt.LPWSTR, ctypes.c_int]
+    user32.GetWindowRect.argtypes = [wt.HWND, ctypes.POINTER(wt.RECT)]
+    user32.WindowFromPoint.argtypes = [wt.POINT]
+    user32.WindowFromPoint.restype = wt.HWND
+    user32.GetAncestor.argtypes = [wt.HWND, wt.UINT]
+    user32.GetAncestor.restype = wt.HWND
+    dwm.DwmGetWindowAttribute.argtypes = [wt.HWND, wt.DWORD, ctypes.c_void_p, wt.DWORD]
+    exclues = {"Shell_TrayWnd", "Shell_SecondaryTrayWnd", "Progman", "WorkerW", "Windows.UI.Core.CoreWindow"}
+    resultats = []
+    ENUM = ctypes.WINFUNCTYPE(wt.BOOL, wt.HWND, wt.LPARAM)
+
+    def rappel(hwnd, _):
+        try:
+            if hwnd == ignorer_hwnd or not user32.IsWindowVisible(hwnd) or user32.IsIconic(hwnd):
+                return True
+            if user32.GetWindowLongW(hwnd, GWL_EXSTYLE) & WS_EX_TOOLWINDOW:
+                return True
+            cloaked = wt.DWORD()
+            if dwm.DwmGetWindowAttribute(hwnd, 14, ctypes.byref(cloaked), 4) == 0 and cloaked.value:
+                return True   # fenêtre d'un autre bureau virtuel ou masquée par Windows
+            classe = ctypes.create_unicode_buffer(64)
+            user32.GetClassNameW(hwnd, classe, 64)
+            if classe.value in exclues or user32.GetWindowTextLengthW(hwnd) == 0:
+                return True
+            r = wt.RECT()
+            if dwm.DwmGetWindowAttribute(hwnd, 9, ctypes.byref(r), ctypes.sizeof(r)) != 0:   # sans l'ombre invisible
+                user32.GetWindowRect(hwnd, ctypes.byref(r))
+            if r.right - r.left < 300 or r.bottom - r.top < 150:
+                return True
+            if zone and (r.right <= zone[0] or r.left >= zone[2]):
+                return True
+            # le bord haut doit être réellement visible (pas recouvert par une autre fenêtre) : on l'échantillonne
+            gauche, droite = max(r.left, zone[0] if zone else r.left), min(r.right, zone[2] if zone else r.right)
+            visibles = []
+            for i in range(24):
+                x = int(gauche + (droite - gauche) * (i + 0.5) / 24)
+                h = user32.WindowFromPoint(wt.POINT(x, r.top + 3))
+                if h and (user32.GetAncestor(h, 2) in (hwnd, ignorer_hwnd) or h == ignorer_hwnd):
+                    visibles.append(x)
+            if visibles:
+                resultats.append((r.left, r.top, r.right, r.bottom, visibles))
+        except Exception:
+            pass
+        return len(resultats) < maximum
+
+    user32.EnumWindows(ENUM(rappel), 0)   # EnumWindows parcourt déjà de l'avant vers l'arrière-plan
+    return resultats
+
+
 def _bgra_premultiplie(img):
     r, g, b, a = img.convert("RGBa").split()
     return Image.merge("RGBA", (b, g, r, a)).tobytes()
@@ -365,6 +419,7 @@ class AvatarCapri:
         self._derniere_activite = time.monotonic()
         self._bulle = None
         self._visible = False
+        self._perche = False   # posée sur le haut d'une fenêtre (sprite capri_OnPanel)
 
     # ---------------------------------------------------- API publique ----
 
@@ -397,6 +452,7 @@ class AvatarCapri:
         self._mode_fin = now + duree if duree else None
         self.mode_courant = mode
         if mode not in ("repos", "dort"):
+            self._perche = False
             self._derniere_activite = now
             self._pose = ("interested", now + random.uniform(3, 6))   # elle reprend son air habituel
 
@@ -442,6 +498,31 @@ class AvatarCapri:
     def changer_taille(self, nom):
         self._cmds.put(("taille", nom))
 
+    @property
+    def perchee(self):
+        return self._perche
+
+    def peut_se_percher(self):
+        return self.biblio.perchoir_disponible() if hasattr(self, "biblio") else False
+
+    def se_percher(self):
+        """Se téléporte (ou apparaît) sur le bord haut d'une des fenêtres ouvertes au premier plan. Retourne False si aucune ne convient."""
+        if not self.peut_se_percher():
+            return False
+        sp = self.biblio.sprite("perchoir")
+        ligne = self.biblio.ligne_perchoir()
+        l, t, r, b = self.zone
+        candidats = []
+        for (fl, ft, fr, fb, xs) in fenetres_au_premier_plan(self.fen.hwnd, self.zone):
+            xs = [x for x in xs if l + sp.w / 2 <= x <= r - sp.w / 2]
+            if xs and ft - ligne >= t and ft <= b - 120:
+                candidats.append((ft, xs))
+        if not candidats:
+            return False
+        ft, xs = random.choice(candidats)
+        self._cmds.put(("percher", random.choice(xs), ft - ligne + sp.h))
+        return True
+
     def reagir(self):
         self._cmds.put(("poke",))
 
@@ -482,8 +563,8 @@ class AvatarCapri:
         self.biblio = Bibliotheque(self.k)
         if not self.biblio.disponible():
             raise FileNotFoundError(f"Aucun sprite trouvé dans {cfg.DOSSIER_ASSETS}")
+        self.biblio.utiliser_slim(self.cfg.get("taille", "moyenne") == "petite")
         self.biblio.sprite("interested")
-        threading.Thread(target=self.biblio.precharger, name="capri-sprites", daemon=True).start()
 
         self._fx = None
         self._fx_solo = None
@@ -630,11 +711,20 @@ class AvatarCapri:
                 self._lancer_deplacement(now, cmd[1])
             elif nom == "traversee":
                 self._lancer_traversee(now, cmd[1], cmd[2], cmd[3])
+            elif nom == "percher":
+                dest = (cmd[1], cmd[2])
+                if self._visible:
+                    self._lancer_deplacement(now, dest)
+                else:
+                    self._montrer(now, dest)
+                self._perche = True
             elif nom == "taille":
                 if cmd[1] in self.TAILLES:
                     self.cfg["taille"] = cmd[1]
                     cfg.sauvegarder(self.config)
                     self._recalculer_echelle()
+                    self.biblio.utiliser_slim(cmd[1] == "petite")
+                    self._perche = False
                     self._ancre = self._ancre_coin(self.cfg.get("position", "bas_droite"))
             elif nom == "poke":
                 self._poke()
@@ -660,6 +750,7 @@ class AvatarCapri:
         if self._visible and not (self._fx and self._fx["type"] == "disparition"):
             return
         self._fx_solo = None
+        self._perche = False
         if coin == "hasard":
             coin = self._coin_hasard()
         if isinstance(coin, tuple):
@@ -683,6 +774,7 @@ class AvatarCapri:
     def _lancer_deplacement(self, now, destination):
         if not self._visible or (self._fx and self._fx["type"] in ("disparition", "teleport")):
             return
+        self._perche = False
         if destination in (None, "hasard"):
             destination = self._coin_hasard()
         if destination in self.COINS:
@@ -1044,6 +1136,8 @@ class AvatarCapri:
 
     def _cle_sprite(self, now):
         mode = self.mode_courant
+        if self._perche and mode in ("repos", "dort") and self.biblio.perchoir_disponible():
+            return "perchoir", 0
         if mode == "ecoute":
             return ("listening_blink" if (now % 4.6) < 0.14 else "listening"), 0
         if mode == "reflechit":

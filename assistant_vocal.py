@@ -608,8 +608,12 @@ class AssistantVocal:
         self._planifier(visible=True)
 
     def _initiative_teleportation(self):
-        self.avatar.teleporter("hasard")
-        self._attendre_effet("teleportation")
+        a = self.config["avatar"]
+        if a.get("se_percher", True) and random.random() < 0.5 and self.avatar.se_percher():
+            self._attendre_effet("teleportation")
+        else:
+            self.avatar.teleporter("hasard")
+            self._attendre_effet("teleportation")
         # quand elle se téléporte souvent, elle ne commente pas chaque saut
         frequent = self._frequence_teleportation()[0] in ("frequente", "intense")
         self._dire_spontane("deplacement", probabilite=0.3 if frequent else None)
@@ -760,6 +764,8 @@ class AssistantVocal:
                 teleportation("normale", "Normale (toutes les 1 à 3 min)"),
                 teleportation("frequente", "Fréquente (toutes les 15 à 60 s)"),
                 teleportation("intense", "Intense (toutes les 5 à 20 s)"))),
+            item('Se percher sur les fenêtres', lambda icon, i: self.basculer_option("avatar", "se_percher"),
+                 checked=lambda i: a.get("se_percher", True)),
             item('Bulles de texte', lambda icon, i: self.basculer_option("avatar", "bulle"),
                  checked=lambda i: a.get("bulle", True)),
             item('Cliquable (déplaçable à la souris)', self.basculer_cliquable,
@@ -809,7 +815,24 @@ class AssistantVocal:
         cfg.journal(f"Démarrage de {self.nom}...")
         self.actif = True
         self.avatar.demarrer()
-        self.voix.prechauffer()
+        # L'icône doit apparaître tout de suite : le chargement de la voix (long) se fait en arrière-plan
+        threading.Thread(target=self._demarrage_differe, name="capri-demarrage", daemon=True).start()
+
+        # Créer et démarrer l'icône de la zone de notification
+        self.tray_icon = pystray.Icon(
+            "capri_assistant",
+            self._icone(),
+            f"{self.nom} - Assistante vocale",
+            menu=self.creer_menu()
+        )
+        self.tray_icon.run()   # bloquant
+
+    def _demarrage_differe(self):
+        """Charge la voix puis lance écoute, bienvenue et initiatives, sans retarder l'icône."""
+        try:
+            self.voix.prechauffer()
+        except Exception as e:
+            cfg.journal(f"Préchauffage de la voix impossible : {e}")
 
         if not self.sans_micro:
             self.thread_ecoute = threading.Thread(target=self.boucle_ecoute, name="capri-ecoute", daemon=True)
@@ -821,20 +844,9 @@ class AssistantVocal:
         if self.signal_relance:
             threading.Thread(target=self._surveiller_relance, daemon=True).start()
 
-        # Créer et démarrer l'icône de la zone de notification
-        self.tray_icon = pystray.Icon(
-            "capri_assistant",
-            self._icone(),
-            f"{self.nom} - Assistante vocale",
-            menu=self.creer_menu()
-        )
-
         cfg.journal(f"{self.nom} est en ligne. Voix : {', '.join(self.voix.moteurs_disponibles()) or 'aucune'}. "
                     f"Cerveau : {'LLM' if self.cerveau.llm.actif() else 'répliques intégrées'}. "
                     f"Mode {'économie' if self.mode_economie else 'normal'}.")
-
-        # Lancer l'icône (bloquant)
-        self.tray_icon.run()
 
     def _message_bienvenue(self):
         """Message de bienvenue (dans un thread séparé), une fois le micro calibré : sa voix ne doit pas fausser le seuil."""

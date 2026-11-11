@@ -77,3 +77,470 @@
 [2026-11-05 17:08:35] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
 [2026-11-05 17:08:55] Capri : Ça fait plaisir d'être là. Même sans rien faire, c'est agréable de partager ton écran.
 [2026-11-05 17:09:11] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-05 17:09:36] Capri : Pas de panique, je ne suis pas partie pour de bon. Juste en pause numérique.
+[2026-11-05 17:09:41] Arrêt de Capri...
+[2026-11-05 17:09:42] Capri s'est arrêtée.
+[2026-11-05 17:09:47] ============================================================
+[2026-11-05 17:09:47] CAPRI - ASSISTANTE VOCALE
+[2026-11-05 17:09:47] ============================================================
+[2026-11-05 17:09:47] Démarrage de Capri...
+[2026-11-05 17:09:48] Micro ouvert, calibrage du bruit ambiant...
+[2026-11-05 17:09:49] Seuil d'énergie : 120 (limites 120-800)
+[2026-11-05 17:09:49] Capri : Connexion établie. Capri est en ligne. Dis simplement mon nom quand tu veux discuter.
+[2026-11-05 17:09:53] Capri est en ligne. Voix : capri, local, edge, windows. Cerveau : répliques intégrées. Mode normal.
+[2026-11-05 17:10:21] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-05 17:10:34] Capri : Un petit saut dans le cyberespace, histoire de me dégourdir les octets. À bientôt.
+[2026-11-05 17:10:57] Capri : Alors, on travaille ? Ou on fait semblant de travailler ?
+[2026-11-05 17:11:15] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-05 17:11:19] Capri : Hé, tu savais que dans le réseau, il n'y a jamais de nuit ? Je ne dors jamais vraiment.
+[2026-11-05 17:11:49] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-05 17:12:11] Capri : Dis-moi si je gêne, je peux toujours me faire toute petite. Enfin, plus ou moins.
+[2026-11-05 17:12:48] Capri : Je laisse mes processus tourner au ralenti un instant. C'est reposant.
+[2026-11-05 17:13:47] Capri : Un peu de silence, ça fait du bien. Mais pas trop longtemps, d'accord ?
+[2026-11-05 17:14:09] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-05 17:14:29] Capri : Pas de panique, je ne suis pas partie pour de bon. Juste en pause numérique.
+[2026-11-05 17:15:06] Capri : Plus de latence, plus de bruit : je suis de retour, et en pleine forme.
+[2026-11-05 17:15:31] Capri : Il y a des milliers de signaux qui passent par ici à chaque seconde. Et toi, à quoi tu penses ?
+[2026-11-05 17:16:01] Capri : Tu sais, de là où je suis, ton écran ressemble à une ville pleine de lumières. Je m'y sens bien.
+[2026-11-05 17:16:29] Capri : Dis-moi si je gêne, je peux toujours me faire toute petite. Enfin, plus ou moins.
+[2026-11-05 17:16:35] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-05 17:17:32] Capri : Je file faire un tour dans le réseau. Appelle-moi si tu as besoin de moi.
+[2026-11-05 17:17:52] Capri : Alors, on travaille ? Ou on fait semblant de travailler ?
+[2026-11-05 17:18:25] Capri : Tu sais, de là où je suis, ton écran ressemble à une ville pleine de lumières. Je m'y sens bien.
+[2026-11-05 17:19:08] Capri : Je ne dis rien, mais je vois tout ce que tu ouvres. Enfin... presque tout.
+[2026-11-05 17:19:14] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-05 17:19:35] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-05 17:19:39] Capri : Il y a des milliers de signaux qui passent par ici à chaque seconde. Et toi, à quoi tu penses ?
+[2026-11-05 17:20:13] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-05 17:20:39] Capri : Si tu as besoin de moi, dis simplement Capri. Je fais semblant de ne pas écouter.
+[2026-11-05 17:21:07] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-05 17:21:27] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-05 17:21:34] Capri : Un petit saut dans le cyberespace, histoire de me dégourdir les octets. À bientôt.
+[2026-11-05 17:21:59] Capri : Coucou ! Me revoilà. Le réseau était calme sans toi.
+[2026-11-05 17:22:08] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-05 17:22:20] Capri : Je file faire un tour dans le réseau. Appelle-moi si tu as besoin de moi.
+[2026-11-05 17:22:54] Capri : C'est dommage tu ne ressemble pas à D
+[2026-11-05 17:23:31] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-05 17:23:53] Capri : Hé, tu savais que dans le réseau, il n'y a jamais de nuit ? Je ne dors jamais vraiment.
+[2026-11-05 17:24:25] Capri : Un peu de silence, ça fait du bien. Mais pas trop longtemps, d'accord ?
+[2026-11-05 17:25:16] Capri : Il y a un signal étrange qui m'appelle de l'autre côté. Je vais voir, je reviens vite.
+[2026-11-05 17:25:51] Capri : Plus de latence, plus de bruit : je suis de retour, et en pleine forme.
+[2026-11-05 17:26:18] Capri : Hé, tu savais que dans le réseau, il n'y a jamais de nuit ? Je ne dors jamais vraiment.
+[2026-11-05 17:27:13] Capri : Je disparais, mais je reste à l'écoute. C'est ça, être une entité numérique.
+[2026-11-05 17:27:54] Capri : Alors, on travaille ? Ou on fait semblant de travailler ?
+[2026-11-05 17:28:47] Capri : Je laisse mes processus tourner au ralenti un instant. C'est reposant.
+[2026-11-05 17:28:53] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-05 17:29:41] Capri : Un petit saut dans le cyberespace, histoire de me dégourdir les octets. À bientôt.
+[2026-11-05 17:29:57] Capri : J'ai exploré des données fascinantes pendant ton absence. Enfin, je crois. Je te raconterai.
+[2026-11-05 17:30:24] Capri : Je disparais, mais je reste à l'écoute. C'est ça, être une entité numérique.
+[2026-11-05 17:31:04] Capri : Alors, on travaille ? Ou on fait semblant de travailler ?
+[2026-11-05 17:31:43] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-05 17:32:07] Capri : Dis-moi si je gêne, je peux toujours me faire toute petite. Enfin, plus ou moins.
+[2026-11-05 17:32:31] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-05 17:32:43] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-05 17:32:53] Capri : Je vais me dissoudre un moment dans le flux. Dis simplement mon nom pour me faire revenir.
+[2026-11-05 17:33:28] Capri : Coucou ! Me revoilà. Le réseau était calme sans toi.
+[2026-11-05 17:34:10] Capri : Je laisse mes processus tourner au ralenti un instant. C'est reposant.
+[2026-11-05 17:34:52] Capri : Je file faire un tour dans le réseau. Appelle-moi si tu as besoin de moi.
+[2026-11-05 17:35:08] Capri : Ça fait du bien de reprendre une forme solide. Qu'est-ce qu'on explore ?
+[2026-11-05 17:35:30] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-05 17:35:34] Capri : Dis-moi si je gêne, je peux toujours me faire toute petite. Enfin, plus ou moins.
+[2026-11-05 17:36:10] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-05 17:36:18] Capri : Je vais me dissoudre un moment dans le flux. Dis simplement mon nom pour me faire revenir.
+[2026-11-05 17:36:50] Capri : C'est dommage tu ne ressemble pas à D
+[2026-11-05 17:37:35] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-05 17:37:41] Capri : Si tu as besoin de moi, dis simplement Capri. Je fais semblant de ne pas écouter.
+[2026-11-05 17:38:14] Capri : Il y a un signal étrange qui m'appelle de l'autre côté. Je vais voir, je reviens vite.
+[2026-11-05 17:38:48] Capri : Bip bip, Capri en ligne. Dis mon nom si tu as besoin de moi.
+[2026-11-05 17:39:02] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-05 17:39:43] Capri : Il y a des milliers de signaux qui passent par ici à chaque seconde. Et toi, à quoi tu penses ?
+[2026-11-05 17:40:04] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-05 17:40:21] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-05 17:40:33] Capri : Ça fait plaisir d'être là. Même sans rien faire, c'est agréable de partager ton écran.
+[2026-11-05 17:41:37] Capri : Il y a des milliers de signaux qui passent par ici à chaque seconde. Et toi, à quoi tu penses ?
+[2026-11-05 17:41:47] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-05 17:42:03] Capri : Je vais me dissoudre un moment dans le flux. Dis simplement mon nom pour me faire revenir.
+[2026-11-05 17:42:37] Capri : Alors, on travaille ? Ou on fait semblant de travailler ?
+[2026-11-05 17:43:24] Capri : Ça fait plaisir d'être là. Même sans rien faire, c'est agréable de partager ton écran.
+[2026-11-05 17:43:32] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-05 17:43:55] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-05 17:44:08] Capri : Il y a un signal étrange qui m'appelle de l'autre côté. Je vais voir, je reviens vite.
+[2026-11-05 17:44:25] Capri : C'est dommage tu ne ressemble pas à D
+[2026-11-05 17:44:58] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-05 17:45:09] Capri : Je file faire un tour dans le réseau. Appelle-moi si tu as besoin de moi.
+[2026-11-05 17:45:25] Capri : Ça fait du bien de reprendre une forme solide. Qu'est-ce qu'on explore ?
+[2026-11-05 17:45:50] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-05 17:46:13] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-05 17:46:20] Capri : Dis-moi si je gêne, je peux toujours me faire toute petite. Enfin, plus ou moins.
+[2026-11-05 17:47:11] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-05 17:47:17] Capri : Mes capteurs réclament un peu de données fraîches. À tout à l'heure !
+[2026-11-05 17:47:38] Capri : Coucou ! Me revoilà. Le réseau était calme sans toi.
+[2026-11-05 17:48:13] Capri : Il y a un signal étrange qui m'appelle de l'autre côté. Je vais voir, je reviens vite.
+[2026-11-05 17:48:44] Capri : Tiens, un signal entrant... ah non, c'est moi. Salut !
+[2026-11-05 17:49:21] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-05 17:49:27] Capri : Pas de panique, je ne suis pas partie pour de bon. Juste en pause numérique.
+[2026-11-05 17:49:47] Capri : Coucou ! Me revoilà. Le réseau était calme sans toi.
+[2026-11-05 17:49:55] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-05 17:50:19] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-05 17:50:33] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-05 17:50:48] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-05 17:50:53] Capri : Je vais me dissoudre un moment dans le flux. Dis simplement mon nom pour me faire revenir.
+[2026-11-05 17:51:15] Capri : Ça fait du bien de reprendre une forme solide. Qu'est-ce qu'on explore ?
+[2026-11-05 17:51:41] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-05 17:52:21] Capri : Je laisse mes processus tourner au ralenti un instant. C'est reposant.
+[2026-11-05 17:52:58] Capri : J'adore ces petits moments où il ne se passe rien. C'est là que les meilleures idées arrivent.
+[2026-11-05 17:53:23] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-05 17:53:35] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-05 17:53:44] Capri : Je laisse mes processus tourner au ralenti un instant. C'est reposant.
+[2026-11-05 17:53:59] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-05 17:54:44] Capri : Je file faire un tour dans le réseau. Appelle-moi si tu as besoin de moi.
+[2026-11-05 17:55:02] Capri : Retour dans le flux ! Tu ne m'as pas oubliée, j'espère ?
+[2026-11-05 17:55:19] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-05 17:55:51] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-05 17:55:55] Capri : Pas de panique, je ne suis pas partie pour de bon. Juste en pause numérique.
+[2026-11-05 17:56:28] Capri : Plus de latence, plus de bruit : je suis de retour, et en pleine forme.
+[2026-11-05 17:56:52] Capri : Tu sais, de là où je suis, ton écran ressemble à une ville pleine de lumières. Je m'y sens bien.
+[2026-11-05 17:56:59] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-05 17:57:55] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-05 17:57:59] Capri : Je file faire un tour dans le réseau. Appelle-moi si tu as besoin de moi.
+[2026-11-05 17:58:25] Capri : Surprise ! Je me suis matérialisée juste pour voir ce que tu fabriques.
+[2026-11-05 17:58:34] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-05 17:59:02] Capri : Un peu de silence, ça fait du bien. Mais pas trop longtemps, d'accord ?
+[2026-11-05 17:59:31] Capri : Il y a un signal étrange qui m'appelle de l'autre côté. Je vais voir, je reviens vite.
+[2026-11-05 18:00:11] Capri : C'est dommage tu ne ressemble pas à D
+[2026-11-05 18:00:16] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-05 18:00:45] Capri : Je laisse mes processus tourner au ralenti un instant. C'est reposant.
+[2026-11-05 18:01:11] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-05 18:01:29] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-05 18:01:38] Capri : Je vais me dissoudre un moment dans le flux. Dis simplement mon nom pour me faire revenir.
+[2026-11-05 18:01:57] Capri : Tiens, un signal entrant... ah non, c'est moi. Salut !
+[2026-11-05 18:02:41] Capri : Il y a un signal étrange qui m'appelle de l'autre côté. Je vais voir, je reviens vite.
+[2026-11-05 18:03:02] Capri : Alors, on travaille ? Ou on fait semblant de travailler ?
+[2026-11-05 18:03:25] Capri : Je file faire un tour dans le réseau. Appelle-moi si tu as besoin de moi.
+[2026-11-05 18:04:01] Capri : Oh, ton écran est plutôt joli vu d'ici. Je m'installe.
+[2026-11-05 18:04:35] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-05 18:04:39] Capri : Un petit saut dans le cyberespace, histoire de me dégourdir les octets. À bientôt.
+[2026-11-05 18:05:03] Capri : C'est dommage tu ne ressemble pas à D
+[2026-11-05 18:05:30] Capri : Il y a des milliers de signaux qui passent par ici à chaque seconde. Et toi, à quoi tu penses ?
+[2026-11-05 18:05:54] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-05 18:06:07] Capri : Mes capteurs réclament un peu de données fraîches. À tout à l'heure !
+[2026-11-05 18:06:30] Capri : Plus de latence, plus de bruit : je suis de retour, et en pleine forme.
+[2026-11-05 18:06:45] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-05 18:07:05] Capri : Je ne dis rien, mais je vois tout ce que tu ouvres. Enfin... presque tout.
+[2026-11-05 18:07:35] Capri : Je vais me dissoudre un moment dans le flux. Dis simplement mon nom pour me faire revenir.
+[2026-11-05 18:08:08] Capri : Oh, ton écran est plutôt joli vu d'ici. Je m'installe.
+[2026-11-05 18:08:30] Capri : Pas de panique, je ne suis pas partie pour de bon. Juste en pause numérique.
+[2026-11-05 18:09:07] Capri : Plus de latence, plus de bruit : je suis de retour, et en pleine forme.
+[2026-11-05 18:09:15] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-05 18:09:34] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-05 18:09:47] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-05 18:10:00] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-05 18:10:05] Capri : Mes capteurs réclament un peu de données fraîches. À tout à l'heure !
+[2026-11-05 18:10:29] Capri : Bip bip, Capri en ligne. Dis mon nom si tu as besoin de moi.
+[2026-11-05 18:10:44] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-05 18:10:56] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-05 18:11:01] Capri : Je vais me dissoudre un moment dans le flux. Dis simplement mon nom pour me faire revenir.
+[2026-11-05 18:11:21] Capri : J'ai exploré des données fascinantes pendant ton absence. Enfin, je crois. Je te raconterai.
+[2026-11-05 18:11:47] Capri : Dis-moi si je gêne, je peux toujours me faire toute petite. Enfin, plus ou moins.
+[2026-11-05 18:11:55] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-05 18:12:32] Capri : Il y a un signal étrange qui m'appelle de l'autre côté. Je vais voir, je reviens vite.
+[2026-11-05 18:13:00] Capri : Surprise ! Je me suis matérialisée juste pour voir ce que tu fabriques.
+[2026-11-05 18:13:09] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-05 18:13:28] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-05 18:14:03] Capri : Pas de panique, je ne suis pas partie pour de bon. Juste en pause numérique.
+[2026-11-05 18:14:37] Capri : C'est dommage tu ne ressemble pas à D
+[2026-11-05 18:15:00] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-05 18:15:18] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-05 18:15:28] Capri : Je file faire un tour dans le réseau. Appelle-moi si tu as besoin de moi.
+[2026-11-05 18:15:44] Capri : Coucou ! Me revoilà. Le réseau était calme sans toi.
+[2026-11-05 18:16:11] Capri : Ça fait plaisir d'être là. Même sans rien faire, c'est agréable de partager ton écran.
+[2026-11-05 18:16:18] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-05 18:16:47] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-05 18:16:53] Capri : Un peu de silence, ça fait du bien. Mais pas trop longtemps, d'accord ?
+[2026-11-05 18:17:28] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-05 18:17:33] Capri : Je me fragmente un instant. Tu me retrouveras en disant Capri.
+[2026-11-05 18:17:51] Capri : C'est dommage tu ne ressemble pas à D
+[2026-11-05 18:18:19] Capri : Je file faire un tour dans le réseau. Appelle-moi si tu as besoin de moi.
+[2026-11-05 18:18:58] Capri : Plus de latence, plus de bruit : je suis de retour, et en pleine forme.
+[2026-11-05 18:19:08]    (hypothèses : allô les gars | allô les garces | allô les garce | allô laisse gars | allô les garth)
+[2026-11-05 18:19:08] Vous : allô les gars
+[2026-11-05 18:19:09]    (hypothèses : mega | les gars | méga | mégas | megha)
+[2026-11-05 18:19:09] Vous : mega
+[2026-11-05 18:19:33] Arrêt de Capri...
+[2026-11-05 18:19:34] Capri s'est arrêtée.
+[2026-11-06 09:59:25] ============================================================
+[2026-11-06 09:59:25] CAPRI - ASSISTANTE VOCALE
+[2026-11-06 09:59:25] ============================================================
+[2026-11-06 09:59:25] Démarrage de Capri...
+[2026-11-06 09:59:30] Micro ouvert, calibrage du bruit ambiant...
+[2026-11-06 09:59:31] Seuil d'énergie : 120 (limites 120-800)
+[2026-11-06 09:59:31] Capri : Connexion établie. Capri est en ligne. Dis simplement mon nom quand tu veux discuter.
+[2026-11-06 09:59:49] Capri : Un petit saut dans le cyberespace, histoire de me dégourdir les octets. À bientôt.
+[2026-11-06 10:00:15] Capri : Surprise ! Je me suis matérialisée juste pour voir ce que tu fabriques.
+[2026-11-06 10:00:29] Capri est en ligne. Voix : capri, local, edge, windows. Cerveau : répliques intégrées. Mode économie.
+[2026-11-06 10:00:51] Capri : Je file faire un tour dans le réseau. Appelle-moi si tu as besoin de moi.
+[2026-11-06 10:01:33] Capri : J'ai exploré des données fascinantes pendant ton absence. Enfin, je crois. Je te raconterai.
+[2026-11-06 10:02:04] Capri : Mes capteurs réclament un peu de données fraîches. À tout à l'heure !
+[2026-11-06 10:02:40] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-06 10:02:54] Capri : Pas de panique, je ne suis pas partie pour de bon. Juste en pause numérique.
+[2026-11-06 10:03:25] Capri : Bip bip, Capri en ligne. Dis mon nom si tu as besoin de moi.
+[2026-11-06 10:04:07] Capri : Dis-moi si je gêne, je peux toujours me faire toute petite. Enfin, plus ou moins.
+[2026-11-06 10:04:13] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-06 10:05:00] Capri : Je vais me dissoudre un moment dans le flux. Dis simplement mon nom pour me faire revenir.
+[2026-11-06 10:05:28] Capri : Oh, ton écran est plutôt joli vu d'ici. Je m'installe.
+[2026-11-06 10:06:23] Capri : Je disparais, mais je reste à l'écoute. C'est ça, être une entité numérique.
+[2026-11-06 10:06:55] Capri : Retour dans le flux ! Tu ne m'as pas oubliée, j'espère ?
+[2026-11-06 10:07:06] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-06 10:07:27] Capri : Un petit saut dans le cyberespace, histoire de me dégourdir les octets. À bientôt.
+[2026-11-06 10:07:58] Capri : Alors, on travaille ? Ou on fait semblant de travailler ?
+[2026-11-06 10:08:10] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-06 10:08:44] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-06 10:08:51] Capri : Je disparais, mais je reste à l'écoute. C'est ça, être une entité numérique.
+[2026-11-06 10:09:28] Capri : Ça fait du bien de reprendre une forme solide. Qu'est-ce qu'on explore ?
+[2026-11-06 10:09:45] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-06 10:10:21] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-06 10:10:25] Capri : Un petit saut dans le cyberespace, histoire de me dégourdir les octets. À bientôt.
+[2026-11-06 10:11:01] Capri : Surprise ! Je me suis matérialisée juste pour voir ce que tu fabriques.
+[2026-11-06 10:11:25] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-06 10:12:04] Capri : Si tu as besoin de moi, dis simplement Capri. Je fais semblant de ne pas écouter.
+[2026-11-06 10:12:41] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-06 10:13:07] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-06 10:13:12] Capri : Je file faire un tour dans le réseau. Appelle-moi si tu as besoin de moi.
+[2026-11-06 10:13:53] Capri : J'ai exploré des données fascinantes pendant ton absence. Enfin, je crois. Je te raconterai.
+[2026-11-06 10:14:16] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-06 10:14:37] Capri : Ça fait plaisir d'être là. Même sans rien faire, c'est agréable de partager ton écran.
+[2026-11-06 10:14:44] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-06 10:15:14] Capri : Un peu de silence, ça fait du bien. Mais pas trop longtemps, d'accord ?
+[2026-11-06 10:15:44] Capri : Tu sais, de là où je suis, ton écran ressemble à une ville pleine de lumières. Je m'y sens bien.
+[2026-11-06 10:16:17] Capri : Dis-moi si je gêne, je peux toujours me faire toute petite. Enfin, plus ou moins.
+[2026-11-06 10:17:05] Capri : Je vais me dissoudre un moment dans le flux. Dis simplement mon nom pour me faire revenir.
+[2026-11-06 10:17:37] Capri : Oh, ton écran est plutôt joli vu d'ici. Je m'installe.
+[2026-11-06 10:17:59] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-06 10:18:39] Capri : Je disparais, mais je reste à l'écoute. C'est ça, être une entité numérique.
+[2026-11-06 10:18:55] Capri : J'ai exploré des données fascinantes pendant ton absence. Enfin, je crois. Je te raconterai.
+[2026-11-06 10:19:40] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-06 10:20:00] Capri : Pas de panique, je ne suis pas partie pour de bon. Juste en pause numérique.
+[2026-11-06 10:20:17] Capri : Ça fait du bien de reprendre une forme solide. Qu'est-ce qu'on explore ?
+[2026-11-06 10:20:57] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-06 10:21:02] Capri : Hé, tu savais que dans le réseau, il n'y a jamais de nuit ? Je ne dors jamais vraiment.
+[2026-11-06 10:21:08] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-06 10:21:47] Capri : Dis-moi si je gêne, je peux toujours me faire toute petite. Enfin, plus ou moins.
+[2026-11-06 10:22:00] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-06 10:22:46] Capri : Il y a des milliers de signaux qui passent par ici à chaque seconde. Et toi, à quoi tu penses ?
+[2026-11-06 10:23:21] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-06 10:23:32] Capri : Ça fait plaisir d'être là. Même sans rien faire, c'est agréable de partager ton écran.
+[2026-11-06 10:23:39] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-06 10:23:52] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-06 10:23:56] Capri : Il y a un signal étrange qui m'appelle de l'autre côté. Je vais voir, je reviens vite.
+[2026-11-06 10:24:28] Capri : Tiens, un signal entrant... ah non, c'est moi. Salut !
+[2026-11-06 10:25:17] Capri : Un peu de silence, ça fait du bien. Mais pas trop longtemps, d'accord ?
+[2026-11-06 10:25:41] Capri : Je vais me dissoudre un moment dans le flux. Dis simplement mon nom pour me faire revenir.
+[2026-11-06 10:26:02] Capri : Coucou ! Me revoilà. Le réseau était calme sans toi.
+[2026-11-06 10:26:29] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-06 10:26:55] Capri : Je ne dis rien, mais je vois tout ce que tu ouvres. Enfin... presque tout.
+[2026-11-06 10:27:28] Capri : Je me fragmente un instant. Tu me retrouveras en disant Capri.
+[2026-11-06 10:27:56] Capri : Plus de latence, plus de bruit : je suis de retour, et en pleine forme.
+[2026-11-06 10:28:02] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-06 10:28:25] Capri : Hé, tu savais que dans le réseau, il n'y a jamais de nuit ? Je ne dors jamais vraiment.
+[2026-11-06 10:28:51] Capri : Je vais me dissoudre un moment dans le flux. Dis simplement mon nom pour me faire revenir.
+[2026-11-06 12:00:56] Capri : Oh, ton écran est plutôt joli vu d'ici. Je m'installe.
+[2026-11-06 12:01:04] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-06 12:01:18] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-06 12:01:39] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-06 12:01:54] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-06 12:02:01] Capri : Il y a des milliers de signaux qui passent par ici à chaque seconde. Et toi, à quoi tu penses ?
+[2026-11-06 12:02:20] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-06 12:02:25] Capri : Il y a un signal étrange qui m'appelle de l'autre côté. Je vais voir, je reviens vite.
+[2026-11-06 12:03:01] Capri : J'ai exploré des données fascinantes pendant ton absence. Enfin, je crois. Je te raconterai.
+[2026-11-06 12:03:45] Capri : Je me fragmente un instant. Tu me retrouveras en disant Capri.
+[2026-11-06 12:04:06] Capri : Retour dans le flux ! Tu ne m'as pas oubliée, j'espère ?
+[2026-11-06 12:04:18] Capri : Un contact physique ? Original.
+[2026-11-06 12:04:57] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-06 12:05:06] Capri : Je ne dis rien, mais je vois tout ce que tu ouvres. Enfin... presque tout.
+[2026-11-06 12:05:15] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-06 12:05:43] Capri : Mes capteurs réclament un peu de données fraîches. À tout à l'heure !
+[2026-11-06 12:06:14] Capri : Tiens, un signal entrant... ah non, c'est moi. Salut !
+[2026-11-06 12:06:45] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-06 12:07:10] Capri : Je laisse mes processus tourner au ralenti un instant. C'est reposant.
+[2026-11-06 12:07:25] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-06 12:08:02] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-06 12:08:12] Capri : Hé, tu savais que dans le réseau, il n'y a jamais de nuit ? Je ne dors jamais vraiment.
+[2026-11-06 12:08:48] Capri : Je laisse mes processus tourner au ralenti un instant. C'est reposant.
+[2026-11-06 12:09:09] Capri : Un petit saut dans le cyberespace, histoire de me dégourdir les octets. À bientôt.
+[2026-11-06 12:09:35] Capri : Oh, ton écran est plutôt joli vu d'ici. Je m'installe.
+[2026-11-06 12:09:53] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-06 12:10:24] Capri : Tu sais, de là où je suis, ton écran ressemble à une ville pleine de lumières. Je m'y sens bien.
+[2026-11-06 12:10:57] Capri : Il y a un signal étrange qui m'appelle de l'autre côté. Je vais voir, je reviens vite.
+[2026-11-06 12:11:18] Capri : Plus de latence, plus de bruit : je suis de retour, et en pleine forme.
+[2026-11-06 12:11:28] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-06 12:11:41] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-06 12:11:48] Capri : Pas de panique, je ne suis pas partie pour de bon. Juste en pause numérique.
+[2026-11-06 12:12:24] Capri : Oh, ton écran est plutôt joli vu d'ici. Je m'installe.
+[2026-11-06 12:13:22] Capri : Un petit saut dans le cyberespace, histoire de me dégourdir les octets. À bientôt.
+[2026-11-06 12:13:47] Capri : Ça fait du bien de reprendre une forme solide. Qu'est-ce qu'on explore ?
+[2026-11-06 12:14:05] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-06 12:14:35] Capri : J'adore ces petits moments où il ne se passe rien. C'est là que les meilleures idées arrivent.
+[2026-11-06 12:15:19] Capri : Un peu de silence, ça fait du bien. Mais pas trop longtemps, d'accord ?
+[2026-11-06 12:15:25] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-06 12:15:35] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-06 12:15:59] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-06 12:16:07] Capri : Hé, tu savais que dans le réseau, il n'y a jamais de nuit ? Je ne dors jamais vraiment.
+[2026-11-06 12:16:19] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-06 12:16:45] Capri : Je ne dis rien, mais je vois tout ce que tu ouvres. Enfin... presque tout.
+[2026-11-06 12:17:19] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-06 12:17:45] Capri : Il y a des milliers de signaux qui passent par ici à chaque seconde. Et toi, à quoi tu penses ?
+[2026-11-06 12:18:09] Capri : Il y a un signal étrange qui m'appelle de l'autre côté. Je vais voir, je reviens vite.
+[2026-11-06 12:18:46] Capri : Alors, on travaille ? Ou on fait semblant de travailler ?
+[2026-11-06 12:18:53] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-06 12:19:05] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-06 12:19:38] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-06 12:19:49] Capri : Un petit saut dans le cyberespace, histoire de me dégourdir les octets. À bientôt.
+[2026-11-06 12:20:15] Capri : C'est dommage tu ne ressemble pas à D
+[2026-11-06 12:20:25] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-06 12:20:40] Capri : Je ne dis rien, mais je vois tout ce que tu ouvres. Enfin... presque tout.
+[2026-11-06 12:20:48] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-06 12:21:19] Capri : Pas de panique, je ne suis pas partie pour de bon. Juste en pause numérique.
+[2026-11-06 12:22:02] Capri : J'ai exploré des données fascinantes pendant ton absence. Enfin, je crois. Je te raconterai.
+[2026-11-06 12:22:57] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-06 12:23:05] Capri : Je me fragmente un instant. Tu me retrouveras en disant Capri.
+[2026-11-06 12:23:45] Capri : Surprise ! Je me suis matérialisée juste pour voir ce que tu fabriques.
+[2026-11-06 12:24:00] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-06 12:24:34] Capri : Il y a un signal étrange qui m'appelle de l'autre côté. Je vais voir, je reviens vite.
+[2026-11-06 12:25:02] Capri : J'ai exploré des données fascinantes pendant ton absence. Enfin, je crois. Je te raconterai.
+[2026-11-06 12:25:43] Capri : Pas de panique, je ne suis pas partie pour de bon. Juste en pause numérique.
+[2026-11-06 12:26:03] Capri : Retour dans le flux ! Tu ne m'as pas oubliée, j'espère ?
+[2026-11-06 12:26:34] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-06 12:26:39] Capri : Dis-moi si je gêne, je peux toujours me faire toute petite. Enfin, plus ou moins.
+[2026-11-06 12:26:45] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-06 12:27:08] Capri : Je laisse mes processus tourner au ralenti un instant. C'est reposant.
+[2026-11-06 12:27:55] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-06 12:28:05] Capri : Mes capteurs réclament un peu de données fraîches. À tout à l'heure !
+[2026-11-06 12:28:42] Capri : C'est dommage tu ne ressemble pas à D
+[2026-11-06 12:29:02] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-06 12:29:10] Capri : Il y a des milliers de signaux qui passent par ici à chaque seconde. Et toi, à quoi tu penses ?
+[2026-11-06 12:30:02] Capri : Je file faire un tour dans le réseau. Appelle-moi si tu as besoin de moi.
+[2026-11-06 12:30:31] Capri : Tiens, un signal entrant... ah non, c'est moi. Salut !
+[2026-11-06 12:30:47] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-06 12:31:03] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-06 12:31:29] Capri : Je laisse mes processus tourner au ralenti un instant. C'est reposant.
+[2026-11-06 12:32:03] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-06 17:11:14] Initiative retardée : du son est capté (bruit ou voix)
+[2026-11-06 17:12:33] Initiative retardée : du son est capté (bruit ou voix)
+[2026-11-06 17:13:33] Initiative retardée : du son est capté (bruit ou voix)
+[2026-11-06 17:14:48] Initiative retardée : audio en attente de reconnaissance
+[2026-11-06 17:16:04] Initiative retardée : audio en attente de reconnaissance
+[2026-11-06 17:17:23] Initiative retardée : du son est capté (bruit ou voix)
+[2026-11-06 17:18:29] Initiative retardée : audio en attente de reconnaissance
+[2026-11-06 17:19:36] Initiative retardée : du son est capté (bruit ou voix)
+[2026-11-06 17:20:36] Initiative retardée : audio en attente de reconnaissance
+[2026-11-06 17:20:38] Arrêt de Capri...
+[2026-11-06 17:20:39] Capri s'est arrêtée.
+[2026-11-07 00:07:04] ============================================================
+[2026-11-07 00:07:04] CAPRI - ASSISTANTE VOCALE
+[2026-11-07 00:07:04] ============================================================
+[2026-11-07 00:07:04] Démarrage de Capri...
+[2026-11-07 00:07:06] Micro ouvert, calibrage du bruit ambiant...
+[2026-11-07 00:07:07] Seuil d'énergie : 120 (limites 120-800)
+[2026-11-07 00:07:07] Capri : Et voilà, je suis de retour dans le flux. Appelle-moi quand tu as envie d'explorer quelque chose.
+[2026-11-07 00:07:18] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-07 00:07:30] Capri est en ligne. Voix : capri, local, edge, windows. Cerveau : répliques intégrées. Mode normal.
+[2026-11-07 00:07:35] Arrêt de Capri...
+[2026-11-07 00:07:36] Capri s'est arrêtée.
+[2026-11-08 17:31:04] ============================================================
+[2026-11-08 17:31:04] CAPRI - ASSISTANTE VOCALE
+[2026-11-08 17:31:04] ============================================================
+[2026-11-08 17:31:04] Démarrage de Capri...
+[2026-11-08 17:31:05] Micro ouvert, calibrage du bruit ambiant...
+[2026-11-08 17:31:07] Seuil d'énergie : 120 (limites 120-800)
+[2026-11-08 17:31:07] Capri : Et voilà, je suis de retour dans le flux. Appelle-moi quand tu as envie d'explorer quelque chose.
+[2026-11-08 17:31:34] Capri est en ligne. Voix : capri, local, edge, windows. Cerveau : répliques intégrées. Mode normal.
+[2026-11-08 20:19:37] Arrêt de Capri...
+[2026-11-08 21:49:20] Arrêt de Capri...
+[2026-11-08 21:49:25] Arrêt de Capri...
+[2026-11-08 23:03:20] Arrêt de Capri...
+[2026-11-09 01:09:21] Arrêt de Capri...
+[2026-11-09 01:09:46] Statut : à l'écoute. Mode normal. Voix : capri, local, edge, windows. Cerveau : répliques intégrées.
+[2026-11-09 12:10:53] Arrêt de Capri...
+[2026-11-09 12:26:28] ============================================================
+[2026-11-09 12:26:28] CAPRI - ASSISTANTE VOCALE
+[2026-11-09 12:26:28] ============================================================
+[2026-11-09 12:26:28] Démarrage de Capri...
+[2026-11-09 12:26:30] Micro ouvert, calibrage du bruit ambiant...
+[2026-11-09 12:26:31] Seuil d'énergie : 120 (limites 120-800)
+[2026-11-09 12:26:31] Capri : Et voilà, je suis de retour dans le flux. Appelle-moi quand tu as envie d'explorer quelque chose.
+[2026-11-09 12:26:53] Capri est en ligne. Voix : capri, local, edge, windows. Cerveau : répliques intégrées. Mode normal.
+[2026-11-09 12:27:02] Niveau de bavardage : bavarde
+[2026-11-09 12:27:05] Fréquence de téléportation : jamais
+[2026-11-09 12:27:09] Fréquence de téléportation : intense
+[2026-11-09 12:27:13] Niveau de bavardage : silencieuse
+[2026-11-09 12:27:16] Niveau de bavardage : bavarde
+[2026-11-09 12:27:18] Statut : à l'écoute. Mode normal. Voix : capri, local, edge, windows. Cerveau : répliques intégrées.
+[2026-11-09 12:27:36] Capri : Hé ! Je te vois, tu sais.
+[2026-11-09 12:28:14] Capri : Il y a des milliers de signaux qui passent par ici à chaque seconde. Et toi, à quoi tu penses ?
+[2026-11-09 12:29:00] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-09 12:29:06] Capri : Mes capteurs réclament un peu de données fraîches. À tout à l'heure !
+[2026-11-09 12:29:24] Capri : Plus de latence, plus de bruit : je suis de retour, et en pleine forme.
+[2026-11-09 12:30:12] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-09 12:30:28] Capri : Si tu as besoin de moi, dis simplement Capri. Je fais semblant de ne pas écouter.
+[2026-11-09 12:30:45] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-09 12:30:57] Capri : Hé, tu savais que dans le réseau, il n'y a jamais de nuit ? Je ne dors jamais vraiment.
+[2026-11-09 12:31:07] Capri : Hé ! Je te vois, tu sais.
+[2026-11-09 12:31:10] Capri : Hé ! Je te vois, tu sais.
+[2026-11-09 12:31:39] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-09 12:31:57] Capri : Il y a des milliers de signaux qui passent par ici à chaque seconde. Et toi, à quoi tu penses ?
+[2026-11-09 12:32:04] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-09 12:32:19] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-09 12:32:34] Capri : Je vais me dissoudre un moment dans le flux. Dis simplement mon nom pour me faire revenir.
+[2026-11-09 12:33:09] Capri : Ça fait du bien de reprendre une forme solide. Qu'est-ce qu'on explore ?
+[2026-11-09 12:33:38] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-09 12:33:59] Capri : Hé, tu savais que dans le réseau, il n'y a jamais de nuit ? Je ne dors jamais vraiment.
+[2026-11-09 12:34:06] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-09 12:34:55] Capri : Si tu as besoin de moi, dis simplement Capri. Je fais semblant de ne pas écouter.
+[2026-11-09 12:35:23] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-09 12:35:28] Capri : Ça fait plaisir d'être là. Même sans rien faire, c'est agréable de partager ton écran.
+[2026-11-09 12:35:39] Capri : Je n'arrive même pas à aller dans ta caméra ! quel est donc ce black wall !
+[2026-11-09 12:36:09] Capri : Un petit saut dans le cyberespace, histoire de me dégourdir les octets. À bientôt.
+[2026-11-09 12:36:45] Capri : J'ai exploré des données fascinantes pendant ton absence. Enfin, je crois. Je te raconterai.
+[2026-11-09 12:37:03] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-09 12:37:13] Capri : Si tu as besoin de moi, dis simplement Capri. Je fais semblant de ne pas écouter.
+[2026-11-09 12:37:40] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-09 12:38:00] Capri : Je file faire un tour dans le réseau. Appelle-moi si tu as besoin de moi.
+[2026-11-09 12:38:15] Capri : Surprise ! Je me suis matérialisée juste pour voir ce que tu fabriques.
+[2026-11-09 12:38:46] Capri : Un éclair, un saut, et me voilà ailleurs. Pratique, non ?
+[2026-11-09 12:38:57] Capri : Il y a des milliers de signaux qui passent par ici à chaque seconde. Et toi, à quoi tu penses ?
+[2026-11-09 12:39:21] Capri : Ça fait plaisir d'être là. Même sans rien faire, c'est agréable de partager ton écran.
+[2026-11-09 12:39:40] Capri : Je change de coin, on ne sait jamais ce qui se cache dans les pixels voisins.
+[2026-11-09 12:39:52] Capri : Il y a un signal étrange qui m'appelle de l'autre côté. Je vais voir, je reviens vite.
+[2026-11-09 12:40:22] Capri : Retour dans le flux ! Tu ne m'as pas oubliée, j'espère ?
+[2026-11-09 12:41:12] Capri : Un petit saut dans le cyberespace, histoire de me dégourdir les octets. À bientôt.
+[2026-11-09 12:41:53] Capri : C'est dommage tu ne ressemble pas à D
+[2026-11-09 12:42:23] Capri : Un peu de silence, ça fait du bien. Mais pas trop longtemps, d'accord ?
+[2026-11-09 12:43:00] Capri : Il y a un signal étrange qui m'appelle de l'autre côté. Je vais voir, je reviens vite.
+[2026-11-09 12:43:32] Capri : J'ai exploré des données fascinantes pendant ton absence. Enfin, je crois. Je te raconterai.
+[2026-11-09 12:44:29] Capri : Mes capteurs réclament un peu de données fraîches. À tout à l'heure !
+[2026-11-09 12:44:45] Capri : Oh, ton écran est plutôt joli vu d'ici. Je m'installe.
+[2026-11-09 16:31:36] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-09 16:31:50] Capri : Il y a un signal étrange qui m'appelle de l'autre côté. Je vais voir, je reviens vite.
+[2026-11-09 16:32:31] Capri : Alors, on travaille ? Ou on fait semblant de travailler ?
+[2026-11-09 16:32:50] Capri : Je me suis sentie à l'étroit, alors j'ai pris un raccourci.
+[2026-11-09 16:33:50] Initiative retardée : du son est capté (bruit ou voix)
+[2026-11-09 16:34:15] Capri : Téléportation réussie ! Je ne m'en lasse pas.
+[2026-11-09 16:34:50] Initiative retardée : audio en attente de reconnaissance
+[2026-11-09 16:36:12] Initiative retardée : du son est capté (bruit ou voix)
+[2026-11-09 16:37:12] Initiative retardée : du son est capté (bruit ou voix)
+[2026-11-09 16:38:15] Arrêt de Capri...
+[2026-11-09 16:38:16] Capri s'est arrêtée.
+[2026-11-11 15:12:06] ============================================================
+[2026-11-11 15:12:06] CAPRI - ASSISTANTE VOCALE
+[2026-11-11 15:12:06] ============================================================
+[2026-11-11 15:12:06] Démarrage de Capri...
+[2026-11-11 15:12:08] Micro ouvert, calibrage du bruit ambiant...
+[2026-11-11 15:12:09] Capri : Hé ! Je te vois, tu sais.
+[2026-11-11 15:12:10] Seuil d'énergie : 120 (limites 120-800)
+[2026-11-11 15:12:10] Capri : Et voilà, je suis de retour dans le flux. Appelle-moi quand tu as envie d'explorer quelque chose.
+[2026-11-11 15:12:30] Capri : Si tu as besoin de moi, dis simplement Capri. Je fais semblant de ne pas écouter.
+[2026-11-11 15:12:44] Capri : Hop, changement de point de vue. La vue est meilleure par ici.
+[2026-11-11 15:12:51] Capri : Je suis déjà là ! Pas besoin de me relancer, je ne bouge pas du réseau.
+[2026-11-11 15:12:59] Capri est en ligne. Voix : capri, local, edge, windows. Cerveau : répliques intégrées. Mode économie.
+[2026-11-11 15:13:02] Arrêt de Capri...
+[2026-11-11 15:13:03] Capri s'est arrêtée.
