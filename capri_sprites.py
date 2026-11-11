@@ -67,9 +67,12 @@ REPLI_SLIM = {
 # Ligne de l'image capri_OnPanel (en pixels de grille) qui touche le bord haut de la fenêtre
 LIGNE_PERCHOIR = 156
 
+# Le sprite perché est plus grand que les autres : la taille moyenne reprend l'ancien rendu de la grande (1.7 / 1.2)
+AGRANDISSEMENT_PERCHOIR = 1.7 / 1.2
+
 
 def charger_grille(chemin):
-    """Retourne l'image à sa résolution pixel-art native (avec cache disque)."""
+    """Retourne l'image à sa résolution pixel-art native. Rien n'est écrit dans cache_sprites : on ne fait que le lire."""
     if _facteur(chemin) == 1:
         return Image.open(chemin).convert("RGBA")   # déjà à la taille de la grille
     nom = re.sub(r"[^A-Za-z0-9_.-]", "_", os.path.basename(chemin))
@@ -81,13 +84,7 @@ def charger_grille(chemin):
         pass
     im = Image.open(chemin).convert("RGBA")
     f = _facteur(chemin)
-    grille = im.resize((max(1, im.width // f), max(1, im.height // f)), NEAREST)
-    try:
-        os.makedirs(cfg.DOSSIER_CACHE_SPRITES, exist_ok=True)
-        grille.save(cache)
-    except OSError:
-        pass
-    return grille
+    return im.resize((max(1, im.width // f), max(1, im.height // f)), NEAREST)
 
 
 def mise_a_echelle(im, k):
@@ -161,7 +158,7 @@ class Bibliotheque:
                 return
 
     def _indexer(self):
-        racines = (cfg.DOSSIER_ASSETS, cfg.DOSSIER_CACHE_SPRITES)
+        racines = (cfg.DOSSIER_CACHE_SPRITES,)   # uniquement cache_sprites : racine = sprites normaux, slim/ = petite
         for racine in racines:
             for chemin in glob.glob(os.path.join(racine, "**", "*.png"), recursive=True):
                 nom = os.path.basename(chemin).lower()
@@ -169,7 +166,7 @@ class Bibliotheque:
                     self._classer(chemin, self._slim_mouth, self._slim_simples)
                 elif nom.startswith("capri_onpanel"):
                     self._perchoir = self._perchoir or chemin
-                elif racine == cfg.DOSSIER_ASSETS:
+                elif racine == cfg.DOSSIER_CACHE_SPRITES:
                     self._classer(chemin, self._mouth, self._simples)
 
     def disponible(self):
@@ -193,16 +190,20 @@ class Bibliotheque:
         return self._perchoir is not None
 
     def cles(self):
+        if self.slim:
+            return list(self._slim_mouth) + list(self._slim_simples)
         return list(self._mouth) + list(self._simples)
 
     def _sources(self, cle):
-        """(fichiers_bouche, fichier_simple) du sprite demandé selon le mode, ou (None, None)."""
+        """(fichiers_bouche, fichier_simple) du sprite demandé : en mode slim, uniquement le dossier slim ; sinon, jamais slim."""
         if self.slim:
-            cle = cle if (cle in self._slim_mouth or cle in self._slim_simples) else REPLI_SLIM.get(cle, cle)
+            if not (cle in self._slim_mouth or cle in self._slim_simples):
+                cle = REPLI_SLIM.get(cle, cle)
+            if not (cle in self._slim_mouth or cle in self._slim_simples):
+                cle = "suspicious" if "suspicious" in self._slim_mouth else next(iter(self.cles()), None)
             if cle in self._slim_mouth:
                 return self._slim_mouth[cle], None
-            if cle in self._slim_simples:
-                return None, self._slim_simples[cle]
+            return None, self._slim_simples.get(cle)
         if cle in self._mouth:
             return self._mouth[cle], None
         return None, self._simples.get(cle)
@@ -210,7 +211,7 @@ class Bibliotheque:
     def _construire_perchoir(self):
         grille = charger_grille(self._perchoir)
         mult = _multiplicateur(self._perchoir)
-        k = self._echelle_effective(*grille.size, mult)
+        k = self._echelle_effective(*grille.size, mult) * AGRANDISSEMENT_PERCHOIR
         sp = Sprite(mise_a_echelle(grille, k))
         sp.h_grille = grille.height
         return {"closed": sp}

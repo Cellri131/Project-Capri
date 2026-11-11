@@ -664,6 +664,13 @@ class AssistantVocal:
             cfg.journal("Capri écoute de nouveau")
             self.avatar.definir_mode("repos")
 
+    def poser_sur_onglet(self, icon=None, item_=None):
+        """Bouton du menu : elle va s'asseoir tout de suite sur le haut d'une fenêtre."""
+        self._cachee_auto = False
+        self.avatar.definir_mode("repos")
+        if not self.avatar.se_percher():
+            cfg.journal("Aucune fenêtre où se percher pour le moment")
+
     def basculer_voix(self, icon, item_):
         self.config["voix"]["muet"] = not self.config["voix"].get("muet", False)
         cfg.sauvegarder(self.config)
@@ -764,6 +771,7 @@ class AssistantVocal:
                 teleportation("normale", "Normale (toutes les 1 à 3 min)"),
                 teleportation("frequente", "Fréquente (toutes les 15 à 60 s)"),
                 teleportation("intense", "Intense (toutes les 5 à 20 s)"))),
+            item('Se poser sur un onglet', self.poser_sur_onglet),
             item('Se percher sur les fenêtres', lambda icon, i: self.basculer_option("avatar", "se_percher"),
                  checked=lambda i: a.get("se_percher", True)),
             item('Bulles de texte', lambda icon, i: self.basculer_option("avatar", "bulle"),

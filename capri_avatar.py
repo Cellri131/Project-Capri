@@ -1,4 +1,4 @@
-"""
+﻿"""
 Avatar de Capri.
 
 Fenêtre Windows translucide (alpha par pixel), sans bordure, toujours au premier plan.
@@ -512,15 +512,18 @@ class AvatarCapri:
         sp = self.biblio.sprite("perchoir")
         ligne = self.biblio.ligne_perchoir()
         l, t, r, b = self.zone
+        # Descente supplémentaire (en pixels de grille, réglable) : le sprite est posé plus bas sur la fenêtre
+        descente = float(self.cfg.get("decalage_perchoir", 156)) * ligne / 156
         candidats = []
         for (fl, ft, fr, fb, xs) in fenetres_au_premier_plan(self.fen.hwnd, self.zone):
             xs = [x for x in xs if l + sp.w / 2 <= x <= r - sp.w / 2]
-            if xs and ft - ligne >= t and ft <= b - 120:
-                candidats.append((ft, xs))
+            y = ft - ligne + sp.h + descente   # bas du sprite ; hors de l'écran il serait ramené plus haut, d'où le décalage
+            if xs and y - sp.h >= t and y <= b:
+                candidats.append((y, xs))
         if not candidats:
             return False
-        ft, xs = random.choice(candidats)
-        self._cmds.put(("percher", random.choice(xs), ft - ligne + sp.h))
+        y, xs = random.choice(candidats)
+        self._cmds.put(("percher", random.choice(xs), y))
         return True
 
     def reagir(self):
@@ -562,7 +565,7 @@ class AvatarCapri:
         self._recalculer_echelle()
         self.biblio = Bibliotheque(self.k)
         if not self.biblio.disponible():
-            raise FileNotFoundError(f"Aucun sprite trouvé dans {cfg.DOSSIER_ASSETS}")
+            raise FileNotFoundError(f"Aucun sprite trouvé dans {cfg.DOSSIER_CACHE_SPRITES}")
         self.biblio.utiliser_slim(self.cfg.get("taille", "moyenne") == "petite")
         self.biblio.sprite("interested")
 

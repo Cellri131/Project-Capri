@@ -40,6 +40,7 @@ DEFAUTS = {
         # jamais | rare | normale | frequente | intense (menu « Téléportation automatique »)
         "frequence_teleportation": "normale",
         "se_percher": True,             # en autonomie, elle s'assoit parfois sur le haut des fenêtres ouvertes
+        "decalage_perchoir": 0,       # descente du sprite perché, en pixels de grille (augmenter = plus bas)
         "apparitions_auto": True,       # elle disparaît et réapparaît d'elle-même
         "expressions_auto": True,       # elle change d'expression toute seule quand on ne lui dit rien
         "cliquable": True,              # False : les clics traversent Capri (elle ne peut plus être déplacée)

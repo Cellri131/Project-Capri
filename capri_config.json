@@ -6,6 +6,8 @@
     "bulle": true,
     "deplacements_auto": true,
     "frequence_teleportation": "intense",
+    "se_percher": true,
+    "decalage_perchoir": 0,
     "apparitions_auto": true,
     "expressions_auto": true,
     "cliquable": true,
@@ -21,8 +23,8 @@
       25
     ],
     "position": "libre",
-    "x": 1572,
-    "y": 526
+    "x": 1325,
+    "y": 510
   },
   "voix": {
     "moteur": "local",
@@ -59,7 +61,7 @@
   "phrases": {
     "probabilite": 0.8,
     "bavardage": true,
-    "niveau_parole": "bavarde",
+    "niveau_parole": "discrete",
     "visible_secondes": [
       30,
       120

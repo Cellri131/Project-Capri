@@ -216,6 +216,7 @@ Tray menu (left click: show / hide; right click: menu):
 | **Size** | Small, medium, large. "Small" switches to the slim sprites (`slim` folder) |
 | **Automatic teleportation** | Never / rare / normal / frequent / intense: how often she teleports on her own |
 | **Perch on windows** | Lets her sit on the top edge of the windows in the foreground when she is idle |
+| **Sit on a tab** | Button: she goes and sits on the top edge of a window right now |
 | Automatic appearances, text bubbles | Checkboxes |
 | Clickable | Off: clicks go through Capri |
 | **Voice** | On / off (she then keeps going with subtitles) |
@@ -843,6 +844,7 @@ Menu de l'icône (clic gauche : afficher / cacher ; clic droit : menu) :
 | **Taille** | Petite, moyenne, grande. « Petite » utilise les sprites fins (dossier `slim`) |
 | **Téléportation automatique** | Jamais / rare / normale / fréquente / intense : à quelle fréquence elle se téléporte d'elle-même |
 | **Se percher sur les fenêtres** | Elle s'assoit sur le bord haut des fenêtres au premier plan quand elle est tranquille |
+| **Se poser sur un onglet** | Bouton : elle va s'asseoir tout de suite sur le bord haut d'une fenêtre |
 | Apparitions automatiques, bulles de texte | Cases à cocher |
 | Cliquable | Désactivé : les clics traversent Capri |
 | **Voix** | Activer / couper (elle continue alors en sous-titres) |
